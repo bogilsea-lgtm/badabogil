@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="30 -790 3232.0 820" role="img" aria-label="바다보길">
+<defs>
+<filter id="paint" x="-3%" y="-8%" width="106%" height="116%" color-interpolation-filters="sRGB">
+<feTurbulence type="fractalNoise" baseFrequency="0.0025 0.07" numOctaves="2" seed="4" result="fray"/>
+<feDisplacementMap in="SourceGraphic" in2="fray" scale="34" xChannelSelector="R" yChannelSelector="B" result="d1"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="3" seed="11" result="n1"/>
+<feDisplacementMap in="d1" in2="n1" scale="16" xChannelSelector="G" yChannelSelector="R" result="rough"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.0012 0.012" numOctaves="2" seed="5" result="n2"/>
+<feColorMatrix in="n2" type="matrix" values="0.42 0 0 0 0.66  0.42 0 0 0 0.66  0.42 0 0 0 0.68  0 0 0 0 1" result="shade"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.005" numOctaves="3" seed="2" result="n5"/>
+<feColorMatrix in="n5" type="matrix" values="0.5 0 0 0 0.62  0.5 0 0 0 0.64  0.4 0 0 0 0.74  0 0 0 0 1" result="pool"/>
+<feBlend in="shade" in2="pool" mode="multiply" result="tex"/>
+<feBlend in="rough" in2="tex" mode="multiply" result="bl"/>
+<feComposite in="bl" in2="rough" operator="in" result="painted"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.0014 0.03" numOctaves="2" seed="21" result="n3"/>
+<feColorMatrix in="n3" type="matrix" values="0 0 0 0 0.75  0 0 0 0 0.85  0 0 0 0 1  0 0 0 2.4 -1.3" result="hi"/>
+<feComposite in="hi" in2="rough" operator="in" result="hi2"/>
+<feBlend in="hi2" in2="painted" mode="normal" result="lit"/>
+<feTurbulence type="fractalNoise" baseFrequency="0.0012 0.09" numOctaves="2" seed="8" result="n4"/>
+<feColorMatrix in="n4" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 12 -2.2" result="gap"/>
+<feComposite in="lit" in2="gap" operator="in"/>
+</filter>
+</defs>
+<g filter="url(#paint)"><path d="M760 -760H572V0H760V-301H835V-451H760ZM506 -30V-752H318V-536H248V-752H60V-30ZM318 -386V-180H248V-386Z M1575 -760H1387V0H1575V-321H1650V-471H1575ZM875 -750V-30H1320V-180H1063V-600H1300V-750Z M2392 -752V-301H1710V-752H1898V-676H2204V-752ZM2204 -451V-526H1898V-451ZM2145 -180H2412V-30H1690V-180H1957V-271H2145Z M3222 -760H3035V-420H3222ZM2522 -420Q2679 -420 2764 -438Q2848 -455 2898 -526Q2949 -597 2949 -750H2522V-622H2744Q2744 -580 2676 -560Q2608 -540 2502 -540ZM3222 -140V-390H2542V-280H3035V-250H2542V0H3232V-110H2730V-140Z" fill="#0047AB" stroke="#0047AB" stroke-width="8" stroke-linejoin="round"/></g>
+</svg>

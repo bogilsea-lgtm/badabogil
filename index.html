@@ -1,0 +1,693 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>보길도 전복 산지직송 | 바다보길</title>
+<meta name="description" content="물살 센 완도 보길도에서 천천히 자란 단단한 전복. 손질전복·활전복을 양식장에서 바로 보냅니다. 주문일 기준 2~3일 이내 발송, 주문 방법 안내.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#BFE3DC">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="https://badabogil.com/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="바다보길">
+<meta property="og:title" content="보길도 전복 산지직송, 바다보길">
+<meta property="og:description" content="한 입에 오독오독, 보길도 양식장에서 수확해 주문일 기준 2~3일 이내 보내드려요.">
+<meta property="og:url" content="https://badabogil.com/">
+<meta property="og:image" content="https://badabogil.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="깡깡한 전복, 바다보길 — 보길도 전복 산지직송">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="보길도 전복 산지직송, 바다보길">
+<meta name="twitter:description" content="한 입에 오독오독, 보길도 양식장에서 수확해 주문일 기준 2~3일 이내 보내드려요.">
+<meta name="twitter:image" content="https://badabogil.com/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mist:#EDF5F3; --white:#fff; --tide:#D6E8E4;
+  --deep:#12333A; --mute:#44636A;
+  --teal:#1B6E73; --teal-dark:#145559; --teal-ink:#145559; --flame:#E0602A; --accent-ink:#B03C08;
+  --nacre:radial-gradient(70% 55% at 8% 6%,rgba(111,208,196,.85),transparent 62%),radial-gradient(60% 50% at 96% 14%,rgba(168,152,235,.75),transparent 62%),radial-gradient(70% 55% at 78% 92%,rgba(246,168,208,.7),transparent 64%),radial-gradient(55% 45% at 6% 88%,rgba(236,226,148,.65),transparent 62%),#E6F2EF;
+  --rule:rgba(23,53,66,.2);
+  --r-btn:999px; --r-panel:28px;
+  --f-display:'Black Han Sans','Noto Sans KR','Noto Sans CJK KR',sans-serif;
+  --f-body:'Noto Sans KR','Noto Sans CJK KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  --gut:20px; --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;color-scheme:light}
+body{margin:0;background:var(--mist);color:var(--deep);font:400 1.0625rem/1.7 var(--f-body);word-break:keep-all;overflow-wrap:break-word}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,p,ol,ul,dl,dd{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gut)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:8px;z-index:50;background:#fff;color:var(--deep);padding:12px 16px;border-radius:12px;font-weight:700}
+.skip:focus{left:12px}
+:focus-visible{outline:3px solid var(--deep);outline-offset:3px}
+.hero :focus-visible,.close :focus-visible{outline-color:#fff}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 28px;border-radius:var(--r-btn);border:2px solid transparent;font:700 1.125rem/1.2 var(--f-body);text-decoration:none;text-align:center;cursor:pointer;touch-action:manipulation;transition:transform .12s var(--ease-out),background-color .15s ease,box-shadow .15s ease}
+.btn:active{transform:scale(.97)}
+.btn{-webkit-tap-highlight-color:transparent}
+.btn--solid{background:var(--teal);color:#fff}
+@media (hover:hover) and (pointer:fine){.btn--solid:hover{background:var(--teal-dark)}}
+.btn--white{background:#fff;color:var(--teal)}
+@media (hover:hover) and (pointer:fine){.btn--white:hover{background:var(--mist)}}
+.btn--line{background:transparent;border-color:currentColor;color:inherit}
+@media (hover:hover) and (pointer:fine){.btn--line:hover{background:rgba(255,255,255,.14)}}
+.btn--ghost{background:transparent;border-color:var(--deep);color:var(--deep)}
+@media (hover:hover) and (pointer:fine){.btn--ghost:hover{background:var(--tide)}}
+.btn--small{min-height:48px;padding:0 22px;font-size:1rem}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--teal);color:#fff;padding-block:14px 56px}
+.hero__art{position:absolute;right:-130px;top:215px;width:340px;color:#fff;pointer-events:none}
+.hero__art path,.hero__art circle{fill:none;stroke:currentColor;stroke-opacity:.3;stroke-width:1.1;stroke-linecap:round}
+.hero__art path{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.4s .25s ease-out forwards}
+.hero__art circle{opacity:0;animation:fadein .6s 1.9s ease-out forwards}
+.hero__in{position:relative}
+.hero__bar{display:flex;align-items:center;justify-content:space-between;min-height:56px}
+.brand{font:400 1.625rem/1 var(--f-display);letter-spacing:-.01em;text-decoration:none}
+.hero__tel{display:inline-flex;align-items:center;min-height:48px;padding-inline:4px;font-weight:700;font-size:1rem;text-decoration:none}
+.hero__title{margin-top:30px;font:400 clamp(76px,29.5vw,176px)/.94 var(--f-display);letter-spacing:-.035em}
+.hero__title span{display:block;animation:rise .6s var(--ease-out) both}
+.hero__title .l2{animation-delay:.08s}
+.hero__title .l3{font-size:.31em;line-height:1.15;letter-spacing:-.01em;margin-top:.5em;animation-delay:.16s}
+.hero__lead{max-width:27em;margin-top:26px;font-size:1.1875rem;line-height:1.65;font-weight:500}
+.hero__gloss{max-width:27em;margin-top:14px;padding-left:14px;border-left:3px solid var(--flame);font-size:1rem;line-height:1.6;color:var(--deep);font-weight:500}
+.hero__cta{display:grid;gap:12px;max-width:420px;margin-top:32px}
+.hero__note{max-width:30em;margin-top:18px;font-size:1rem;line-height:1.6}
+.hero__inapp{max-width:30em;margin-top:14px;padding:14px 16px;border-radius:16px;background:rgba(255,255,255,.16);font-size:0.9375rem;line-height:1.55}
+.hero__inapp button{margin-top:8px;display:block;min-height:44px;padding:0 18px;border-radius:var(--r-btn);border:2px solid #fff;background:transparent;color:#fff;font:700 0.9375rem/1 var(--f-body);cursor:pointer}
+@keyframes rise{from{opacity:0;transform:translateY(.22em)}to{opacity:1;transform:none}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes fadein{to{opacity:1}}
+
+
+/* sections */
+.sec{padding-block:76px}
+.sec--white{background:#fff}
+.sec__h,.close__h,.hero h1,.point h3{text-wrap:balance}
+::selection{background:var(--tide);color:var(--deep)}
+html{accent-color:var(--teal)}
+.sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.size__cnt,.pay__no{font-variant-numeric:tabular-nums}
+.hero__lead,.sec__lead,.close__p,.point p{text-wrap:pretty}
+.sec__h{font:400 clamp(31px,8.2vw,54px)/1.18 var(--f-display);letter-spacing:-.025em}
+.sec__lead{max-width:36em;margin-top:18px;color:var(--mute)}
+.split{display:grid;gap:40px}
+.point{padding-block:24px;border-top:1.5px solid var(--deep)}
+.point:last-child{border-bottom:1.5px solid var(--deep)}
+.point h3{font:700 1.25rem/1.4 var(--f-body);margin-bottom:6px}
+.point p{color:var(--mute)}
+.fix{margin:28px 0 0;padding:0;list-style:none;max-width:44em}
+.fix li{padding-block:22px;border-top:1.5px solid var(--deep)}
+.fix li:last-child{border-bottom:1.5px solid var(--deep)}
+.fix__q{color:var(--mute);font-size:1rem;line-height:1.55}
+.fix__a{margin-top:8px;font:700 1.25rem/1.45 var(--f-body);text-wrap:balance}
+.fix__a span{display:block;margin-top:4px;font:400 1rem/1.6 var(--f-body);color:var(--mute)}
+.pull{margin-top:32px;font:400 clamp(22px,5.6vw,30px)/1.4 var(--f-display);letter-spacing:-.02em;color:var(--teal-ink)}
+
+/* history card */
+.hcard{position:relative;width:min(100%,340px);margin-top:36px;padding:22px 22px 0;background:#fff;border:2px solid var(--deep);border-radius:20px;overflow:hidden;transform:rotate(-1.8deg);box-shadow:0 14px 30px -18px rgba(23,53,66,.45)}
+.hcard__top{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:6px}
+.hcard__brand{font:400 1.25rem/1.2 var(--f-display);color:var(--teal-ink)}
+.hcard__kind{font-weight:700;font-size:0.9375rem}
+.hcard__row{display:flex;align-items:flex-end;gap:12px;min-height:46px;border-bottom:2px dotted rgba(23,53,66,.45)}
+.hcard__row span{font-weight:700;font-size:0.9375rem;padding-bottom:4px}
+.hcard__band{margin:22px -22px 0;padding:14px 22px;background:var(--teal);color:#fff;font:400 1.1875rem/1.3 var(--f-display);letter-spacing:-.01em}
+.hcard__cap{margin-top:16px;font-size:0.9062rem;color:var(--mute)}
+
+/* sizes */
+.sizes{width:100%;margin-top:34px;border-collapse:collapse}
+.sizes thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.sizes tbody{display:block}
+.sizes,.size>*{min-width:0}
+.size{display:grid;grid-template-columns:78px minmax(0,1fr);grid-template-areas:"art name" "art use" "art cnt" "art wt";column-gap:16px;padding-block:20px;border-top:1.5px solid var(--rule)}
+.size:last-child{border-bottom:1.5px solid var(--rule)}
+.size__art{grid-area:art;align-self:start;display:flex;align-items:center;justify-content:center;height:70px;color:var(--teal)}
+.size__name{grid-area:name;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px}
+.size__no{font:400 1.75rem/1.2 var(--f-display);letter-spacing:-.02em;color:var(--teal-ink)}
+.size__tag{font-weight:700;font-size:1.0625rem}
+.size__badge{display:inline-block;margin-left:2px;padding:1px 10px;border:1.5px solid var(--teal-ink);border-radius:var(--r-btn);color:var(--teal-ink);font-size:0.8438rem;font-weight:700;line-height:1.6}
+.size__use{grid-area:use;font-weight:500}
+.size__cnt{grid-area:cnt;color:var(--mute)}
+.size__wt{grid-area:wt;color:var(--mute)}
+.size__wt:empty{display:none}
+.sizes__foot{margin-top:18px;font-size:0.9062rem;color:var(--mute)}
+.tips{display:grid;gap:12px;margin-top:30px}
+.tips p{padding-left:16px;border-left:4px solid var(--teal);font-weight:500}
+.tips .btn{margin-top:10px;justify-self:start}
+
+/* steps */
+.steps{list-style:none;padding:0;margin-top:34px;display:grid;gap:14px}
+.steps>li{display:flex;align-items:center;gap:18px;padding:18px 18px;border-radius:var(--r-panel);background:#fff;border:2px solid var(--deep)}
+.steps>li:nth-child(1){background:linear-gradient(120deg,#fff 55%,rgba(111,208,196,.28))}
+.steps>li:nth-child(2){background:linear-gradient(120deg,#fff 55%,rgba(168,152,235,.26))}
+.steps>li:nth-child(3){background:linear-gradient(120deg,#fff 55%,rgba(246,168,208,.30))}
+.steps>li:nth-child(4){background:linear-gradient(120deg,#fff 55%,rgba(236,226,148,.40))}
+.steps__ic{position:relative;flex:none;width:72px;height:72px;border-radius:22px;background:var(--nacre);display:grid;place-items:center;color:var(--deep)}
+.steps__ic svg{width:44px;height:44px;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.steps__n{position:absolute;left:-8px;top:-8px;width:28px;height:28px;border-radius:50%;background:var(--deep);color:#fff;font:400 0.9375rem/28px var(--f-display);text-align:center}
+.steps__b{min-width:0}
+.steps h3{font:400 1.375rem/1.3 var(--f-display);letter-spacing:-.02em}
+.chips{list-style:none;padding:0;margin:8px 0 0;display:flex;flex-wrap:wrap;gap:6px}
+.chips li{padding:3px 11px;border-radius:999px;background:var(--mist);border:1.5px solid rgba(18,51,58,.25);font-weight:700;font-size:0.9062rem;line-height:1.5}
+.chips .chip--key{background:var(--deep);color:#fff;border-color:var(--deep)}
+.steps__warn{margin-top:8px;font-weight:700;font-size:0.875rem;color:var(--accent-ink)}
+.sec--tide{background:var(--tide)}
+.flow{list-style:none;padding:0;margin-top:34px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.flow>li{min-width:0}
+.flow li{position:relative;padding:22px 16px 20px;border-radius:var(--r-panel);background:#fff;border:2px solid var(--deep);text-align:center}
+.flow__ic{display:grid;place-items:center;width:84px;height:84px;margin:0 auto;border-radius:26px;background:var(--nacre);color:var(--deep)}
+.flow__ic svg{width:52px;height:52px;fill:none;stroke:currentColor;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.flow__n{position:absolute;left:12px;top:10px;font:400 1.125rem/1 var(--f-display);color:var(--accent-ink)}
+.flow h3{margin-top:14px;font:400 1.25rem/1.3 var(--f-display);letter-spacing:-.02em;text-wrap:balance}
+@media (max-width:360px){.odok__fig{width:64px;height:64px}.flow{grid-template-columns:1fr}.flow__ic{width:64px;height:64px}.flow__ic svg{width:40px;height:40px}}
+@media (min-width:760px){.flow{grid-template-columns:repeat(4,1fr)}.flow li:not(:last-child)::after{content:"";position:absolute;right:-13px;top:50%;width:10px;height:10px;border-top:3px solid var(--deep);border-right:3px solid var(--deep);transform:translateY(-50%) rotate(45deg)}}
+.pay{margin-top:14px;padding:26px 22px;border:2px solid var(--deep);border-radius:var(--r-panel);background:#fff}
+.pay__h{font-weight:700;font-size:0.9688rem;color:var(--mute)}
+.pay__bank{margin-top:6px;font-weight:700;font-size:1.125rem}
+.pay__no{margin-top:2px;font:400 clamp(28px,8.4vw,40px)/1.2 var(--f-display);letter-spacing:.01em;word-break:normal;font-variant-numeric:tabular-nums}
+.pay__who{color:var(--mute)}
+.pay__row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:18px}
+.pay__ok{font-weight:700;color:var(--teal-ink);min-height:1.6em}
+.pay__warn{margin-top:16px;padding:12px 14px;border-radius:14px;background:var(--mist);font-weight:700;font-size:1rem}
+
+/* faq */
+.faq{margin-top:34px}
+.faq details{border-top:1.5px solid var(--deep)}
+.faq details:last-child{border-bottom:1.5px solid var(--deep)}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:14px 0;cursor:pointer;list-style:none;font:700 1.125rem/1.45 var(--f-body)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:22px;height:22px;background:linear-gradient(currentColor,currentColor) center/100% 2.5px no-repeat,linear-gradient(currentColor,currentColor) center/2.5px 100% no-repeat;transition:transform .2s var(--ease-out)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details[open] .faq__a{animation:fadein .2s var(--ease-out) both}
+.faq__a{padding:0 0 24px;color:var(--mute);max-width:38em;opacity:0;animation:none}
+.faq details[open] .faq__a{opacity:1}
+
+/* closing */
+.close{background:var(--teal);color:#fff;padding-block:76px 80px}
+.close__h span{display:block}
+.close__h{font:400 clamp(29px,8.9vw,68px)/1.14 var(--f-display);letter-spacing:-.03em}
+.close__p{max-width:28em;margin-top:18px;font-size:1.125rem;font-weight:500}
+.close__cta{display:grid;gap:12px;max-width:420px;margin-top:30px}
+.close__sign{margin-top:34px;font:400 1.375rem/1.3 var(--f-display);display:flex;flex-wrap:wrap;align-items:center;column-gap:14px}
+.close__tel{display:inline-flex;align-items:center;min-height:48px;font:700 1.125rem/1.2 var(--f-body);color:inherit;text-decoration:underline;text-underline-offset:4px}
+
+/* footer */
+.foot{background:var(--tide);padding-block:30px 36px;font-size:0.8438rem;line-height:1.8;color:var(--mute)}
+.foot__links{display:flex;align-items:center;gap:12px;padding-bottom:14px;margin-bottom:14px;border-bottom:1px solid rgba(18,51,58,.25);color:var(--deep)}
+.foot__links a{display:inline-flex;align-items:center;min-height:44px;font-weight:700;font-size:0.9062rem;color:var(--deep)}
+.foot__info{display:flex;flex-wrap:wrap;gap:0 14px}
+.foot__info span{white-space:nowrap}
+.foot__info span:nth-child(5){white-space:normal}
+.foot__info b{font-weight:500}
+.foot__info a{display:inline-block;padding:8px 0;color:var(--deep);text-decoration:underline}
+.foot__copy{margin-top:10px;font-size:0.7812rem}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1fr auto;gap:10px;padding:10px var(--gut) calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.97);border-top:1px solid var(--rule);transform:translateY(110%);visibility:hidden;transition:transform .18s var(--ease-out),visibility 0s .18s}
+.bar.is-on{transform:none;visibility:visible;transition:transform .3s var(--ease-drawer)}
+.bar .btn{min-height:52px}
+
+@media (min-width:760px){
+  .size{grid-template-columns:96px 1.2fr 1.2fr 1fr 1fr;grid-template-areas:"art name use cnt wt";align-items:center;column-gap:20px;padding-block:18px}
+  .size__art{height:76px}
+  .sizes thead{position:static;width:auto;height:auto;overflow:visible;clip:auto;display:block}
+  .sizes thead tr{display:grid;grid-template-columns:96px 1.2fr 1.2fr 1fr 1fr;column-gap:20px;padding-block:10px;color:var(--mute);font-size:0.9062rem;font-weight:700}
+  .sizes thead th{display:block;text-align:left;font-weight:700}
+}
+@media (min-width:900px){
+  :root{--gut:32px}
+  body{font-size:1.125rem}
+  .hero{padding-block:18px 84px}
+  .hero__art{right:-30px;top:48px;width:560px}
+  .hero__lead{font-size:1.375rem}
+  .hero__cta{grid-template-columns:auto auto;justify-content:start;max-width:none}
+  .sec{padding-block:112px}
+  .split{grid-template-columns:5fr 6fr;gap:80px;align-items:start}
+  .split__l{position:sticky;top:40px}
+  .close{padding-block:112px}
+  .close__cta{grid-template-columns:auto auto;justify-content:start;max-width:none}
+    .bar{left:50%;right:auto;bottom:18px;width:min(560px,calc(100% - 40px));padding:10px 12px;border:1px solid var(--rule);border-radius:var(--r-btn);box-shadow:0 10px 34px rgba(23,53,66,.18);transform:translate(-50%,160%)}
+  .bar.is-on{transform:translate(-50%,0)}
+}
+
+/* nacre variant */
+.hero,.close{background:var(--nacre);color:var(--deep)}
+.hero__in{z-index:1}
+.hero :focus-visible,.close :focus-visible{outline-color:var(--deep)}
+.hero__art{color:#1B6E73}
+.hero__art path,.hero__art circle{stroke-opacity:.4}
+.hero__gloss{border-left-color:var(--flame)}
+.btn--white,.btn--solid{background:#CC470B;color:#fff}
+@media (hover:hover) and (pointer:fine){.btn--white:hover,.btn--solid:hover{background:#A83A08}}
+@media (hover:hover) and (pointer:fine){.btn--line:hover{background:rgba(18,51,58,.08)}}
+.hero__inapp{background:rgba(255,255,255,.62)}
+.hero__inapp button{border-color:var(--deep);color:var(--deep)}
+.size__badge{border-color:var(--accent-ink);color:var(--accent-ink)}
+.tips p{border-left-color:var(--flame)}
+.hcard__band{background:var(--nacre);color:var(--deep)}
+.brand{display:inline-flex;align-items:center;gap:10px;min-height:44px}
+.brand svg{width:40px;height:40px;flex:none}
+.brand .brand__wm{width:auto;height:40px;aspect-ratio:3232/820;margin-left:2px}
+.hero__art{right:-44px;top:84px;width:270px}
+.hero__art path,.hero__art circle{stroke-width:2.2;stroke-opacity:.45}
+@media (min-width:760px){.hero__art{right:-20px;top:40px;width:520px}}
+.wm-s{display:block;width:auto;aspect-ratio:3232/820;flex:none}
+.foot__brand{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.foot__brand .sym-s{width:34px;height:34px}
+.foot__brand span{font:400 1.5rem/1.2 var(--f-display);color:var(--deep)}
+.odok{display:flex;align-items:center;gap:6px;margin-top:22px}
+.odok__fig{flex:none;width:96px;height:96px}
+.odok__say{position:relative;min-width:0;overflow-wrap:anywhere;margin:0;padding:14px 18px;border:2px solid var(--deep);border-radius:22px;background:#fff;font-weight:700;font-size:1.0312rem;line-height:1.5;color:var(--deep)}
+.odok__say::before{content:"";position:absolute;left:-10px;top:50%;width:16px;height:16px;background:#fff;border-left:2px solid var(--deep);border-bottom:2px solid var(--deep);transform:translateY(-50%) rotate(45deg)}
+/* 200% 확대(좁은 뷰포트) 대응 */
+@media (max-width:260px){
+  .steps>li{flex-direction:column;align-items:flex-start;gap:14px}
+  .size__name{min-width:0}.size__no{font-size:1.375rem;overflow-wrap:anywhere}
+  .foot__info span{white-space:normal}
+  .bar{grid-template-columns:1fr}
+  .brand .brand__wm{height:28px}.brand svg:first-child{width:30px;height:30px}
+  .hero{overflow-x:clip}
+  .size{grid-template-columns:56px minmax(0,1fr);column-gap:10px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .hero__art path{stroke-dashoffset:0}
+  .hero__art circle{opacity:1}
+  .faq__a{opacity:1}
+  .hero__title span{animation:softin .4s ease-out both!important}
+}
+@keyframes softin{from{opacity:0}to{opacity:1}}
+
+/* 손질전복 대표 패널 */
+.feat{display:flex;align-items:center;gap:20px;margin-top:30px;padding:24px;border:2px solid var(--deep);border-radius:var(--r-panel);background:var(--nacre);box-shadow:0 1px 2px rgba(20,85,89,.14),0 10px 28px -6px rgba(20,85,89,.28)}
+.feat__ic{flex:none;width:84px;height:68px;padding:8px;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 2px var(--deep)}
+.feat__h{font:400 1.875rem/1.2 var(--f-display);letter-spacing:-.02em;color:var(--teal-ink)}
+.feat__n{margin-left:8px;font:700 1.0625rem/1 var(--f-body);color:var(--deep)}
+.feat__p{margin-top:6px;font-weight:500}
+.live__h{margin-top:34px;font:700 1.1875rem/1.4 var(--f-body)}
+.live__h+.sizes{margin-top:10px}
+@media (max-width:420px){.feat{flex-direction:column;align-items:flex-start;gap:12px}}
+/* 주요 버튼 그림자: 주황 계열을 살짝 띄움 */
+.btn--solid,.btn--white{box-shadow:0 1px 2px rgba(120,40,0,.28),0 8px 18px -6px rgba(204,71,11,.45)}
+.btn--solid:active,.btn--white:active{box-shadow:0 1px 1px rgba(120,40,0,.3)}
+/* FAQ 묶음 */
+.faq{display:grid;gap:34px}
+.faq__gh{margin-bottom:6px;font:700 0.9375rem/1.4 var(--f-body);color:var(--teal-ink)}
+@media (prefers-reduced-motion:no-preference){
+  .faq details{interpolate-size:allow-keywords}
+  .faq details::details-content{block-size:0;overflow:clip;transition:block-size .22s var(--ease-out),content-visibility .22s allow-discrete}
+  .faq details[open]::details-content{block-size:auto}
+}
+
+/* 모션·상호작용 (Emil Kowalski / Apple 원칙 적용) */
+:root{--ease-out:cubic-bezier(.23,1,.32,1);--ease-drawer:cubic-bezier(.32,.72,0,1)}
+summary,a{touch-action:manipulation}
+.faq summary:active{background:rgba(27,110,115,.07)}
+.bar{-webkit-backdrop-filter:blur(18px) saturate(160%);backdrop-filter:blur(18px) saturate(160%);background:rgba(255,255,255,.84)}
+@media (prefers-reduced-transparency:reduce){.bar{background:#fff;-webkit-backdrop-filter:none;backdrop-filter:none}}
+@media (prefers-contrast:more){.bar{background:#fff;border-top:2px solid var(--deep)}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://badabogil.com/#org","name":"바다보길","url":"https://badabogil.com/","telephone":"+82-10-5100-0830","description":"전남 완도군 보길도 양식장에서 수확한 전복을 소비자에게 바로 보내는 산지직송 전복 판매","image":"https://badabogil.com/og.png","address":{"@type":"PostalAddress","streetAddress":"보길면 부황길 31","addressLocality":"완도군","addressRegion":"전남광주통합특별시","addressCountry":"KR"}},{"@type":"WebSite","@id":"https://badabogil.com/#site","url":"https://badabogil.com/","name":"바다보길","inLanguage":"ko-KR","publisher":{"@id":"https://badabogil.com/#org"}},{"@type":"WebPage","@id":"https://badabogil.com/#page","url":"https://badabogil.com/","name":"보길도 전복 산지직송 | 바다보길","description":"물살 센 완도 보길도에서 천천히 자란 단단한 전복. 손질전복·활전복을 양식장에서 바로 보냅니다. 주문일 기준 2~3일 이내 발송, 주문 방법 안내.","inLanguage":"ko-KR","isPartOf":{"@id":"https://badabogil.com/#site"},"about":{"@id":"https://badabogil.com/#org"},"primaryImageOfPage":"https://badabogil.com/og.png"},{"@type":"HowTo","name":"전복 주문 방법","step":[{"@type":"HowToStep","position":1,"name":"주문서 쓰기","text":"주문서에 크기, 수량, 받는 곳을 적습니다."},{"@type":"HowToStep","position":2,"name":"금액 문자 받기","text":"그날 시세와 배송비를 더한 금액을 문자로 안내받습니다."},{"@type":"HowToStep","position":3,"name":"1일 안에 입금","text":"계좌이체 또는 결제 링크(카드·간편결제)로 1일 안에 결제합니다."},{"@type":"HowToStep","position":4,"name":"어가에서 발송","text":"주문일 기준 2~3일 이내에 발송하며, 결항 시 최대 5일이 걸릴 수 있습니다. 기본 배송비는 3,000원이며 2kg 이상 주문 시 무료배송입니다."}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"어디에서 키운 전복인가요?","acceptedAnswer":{"@type":"Answer","text":"전남 완도군 보길도 바다 양식장에서 어가가 키운 전복입니다. 상자에 키운 어가와 건진 날을 적은 이력카드를 함께 넣어 보냅니다."}},{"@type":"Question","name":"손질전복은 어떻게 손질해서 오나요?","acceptedAnswer":{"@type":"Answer","text":"껍질과 내장까지 손질해서 보내 드립니다. 손질 없이 바로 조리하실 수 있어요. 통째로 받고 싶으시면 주문서에서 활전복 크기를 고르세요."}},{"@type":"Question","name":"시장이나 마트 전복과 뭐가 다른가요?","acceptedAnswer":{"@type":"Answer","text":"물살이 센 보길도 바다에서 천천히 자라 육질이 단단합니다. 또 수족관에서 오래 머문 전복은 먹이를 먹지 못해 살이 빠지기 쉬운데, 바다보길은 양식장에서 수확해 바로 포장·발송합니다."}},{"@type":"Question","name":"전복 크기는 요리별로 어떻게 고르나요?","acceptedAnswer":{"@type":"Answer","text":"활전복은 회·접대용은 4~6미(자이언트), 회·스테이크·선물용은 7~8미(특대), 회·버터구이·찜은 9~10미(대), 전복장은 11~12미(중), 죽·물회는 13~14미(소)가 어울립니다. 미는 1kg에 들어가는 마릿수라서 숫자가 작을수록 큰 전복입니다."}},{"@type":"Question","name":"크기를 못 고르겠어요.","acceptedAnswer":{"@type":"Answer","text":"주문서의 크기에서 '잘 모르겠어요'를 고르고, 몇 분이 드실지와 해 드실 요리를 적어 주세요. 맞춰 담아 드립니다."}},{"@type":"Question","name":"가격은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"전복 값은 그날 시세에 따라 달라서, 주문서를 보내 주시면 그날 금액을 문자로 안내해 드립니다. 금액을 확인하신 뒤에 입금하시면 됩니다."}},{"@type":"Question","name":"어떻게 결제하나요?","acceptedAnswer":{"@type":"Answer","text":"계좌이체로 받습니다. 금액 안내 문자에 결제 링크를 함께 보내 드리면 카드나 간편결제로도 결제하실 수 있습니다."}},{"@type":"Question","name":"입금은 언제까지 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"금액 안내 문자를 받은 날로부터 1일 안에 입금해 주세요. 입금이 없으면 주문은 자동으로 취소됩니다. 금액은 안내 문자로 확정되니, 문자를 받으신 뒤에 입금해 주세요."}},{"@type":"Question","name":"언제 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"주문일 기준 2~3일 이내에 발송합니다. 결항 등으로 배가 뜨지 못하면 최대 5일까지 걸릴 수 있고, 이 경우 따로 연락드립니다."}},{"@type":"Question","name":"배송비는 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"기본 배송비는 3,000원입니다. 2kg 이상 주문하시면 무료배송이고, 도서산간 지역은 추가 배송비가 발생합니다. 배송비는 금액 안내 문자에 함께 적어 드립니다."}},{"@type":"Question","name":"선물로 보낼 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"주문서에 받는 분 이름과 주소를 따로 적으시면 그분께 바로 보냅니다."}},{"@type":"Question","name":"받았는데 상태가 이상해요.","acceptedAnswer":{"@type":"Answer","text":"받으시면 바로 상태를 확인해 주시고, 문제가 있으면 사진과 함께 010-5100-0830으로 알려 주세요. 확인한 뒤 교환이나 환불로 처리해 드립니다. 신선식품이라 단순 변심으로는 반품이 어렵습니다."}}]}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 바로가기</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="nacre" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5FC2B7"/><stop offset=".38" stop-color="#8FA8EA"/><stop offset=".72" stop-color="#E9A9CF"/><stop offset="1" stop-color="#EBD88E"/></linearGradient>
+    <mask id="holes"><rect width="200" height="200" fill="#fff"/><circle cx="112" cy="58" r="6" fill="#000"/><circle cx="134" cy="58" r="6.5" fill="#000"/><circle cx="156" cy="65" r="7" fill="#000"/></mask>
+    <symbol id="bmark" viewBox="0 0 200 200">
+      <path mask="url(#holes)" d="M20 112C16 78 46 50 90 44C138 38 184 58 190 98C195 134 160 162 112 166C64 170 24 150 20 112Z" fill="url(#nacre)" stroke="#1B6E73" stroke-width="6" stroke-linejoin="round"/>
+      <g fill="none" stroke="#fff" stroke-opacity=".9" stroke-width="7" stroke-linecap="round"><path d="M34 112C32 94 46 82 62 84C76 86 80 100 72 108C66 114 56 112 55 104"/><path d="M96 84C126 80 156 90 170 110"/><path d="M92 106C116 104 140 112 154 128"/><path d="M96 130C110 130 124 136 134 146"/></g>
+    </symbol>
+    <filter id="paint" x="-3%" y="-8%" width="106%" height="116%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.0025 0.07" numOctaves="2" seed="4" result="fray"/><feDisplacementMap in="SourceGraphic" in2="fray" scale="34" xChannelSelector="R" yChannelSelector="B" result="d1"/><feTurbulence type="fractalNoise" baseFrequency="0.014" numOctaves="3" seed="11" result="n1"/><feDisplacementMap in="d1" in2="n1" scale="16" xChannelSelector="G" yChannelSelector="R" result="rough"/><feTurbulence type="fractalNoise" baseFrequency="0.0012 0.012" numOctaves="2" seed="5" result="n2"/><feColorMatrix in="n2" type="matrix" values="0.42 0 0 0 0.66  0.42 0 0 0 0.66  0.42 0 0 0 0.68  0 0 0 0 1" result="shade"/><feTurbulence type="fractalNoise" baseFrequency="0.005" numOctaves="3" seed="2" result="n5"/><feColorMatrix in="n5" type="matrix" values="0.5 0 0 0 0.62  0.5 0 0 0 0.64  0.4 0 0 0 0.74  0 0 0 0 1" result="pool"/><feBlend in="shade" in2="pool" mode="multiply" result="tex"/><feBlend in="rough" in2="tex" mode="multiply" result="bl"/><feComposite in="bl" in2="rough" operator="in" result="painted"/><feTurbulence type="fractalNoise" baseFrequency="0.0014 0.03" numOctaves="2" seed="21" result="n3"/><feColorMatrix in="n3" type="matrix" values="0 0 0 0 0.75  0 0 0 0 0.85  0 0 0 0 1  0 0 0 2.4 -1.3" result="hi"/><feComposite in="hi" in2="rough" operator="in" result="hi2"/><feBlend in="hi2" in2="painted" mode="normal" result="lit"/><feTurbulence type="fractalNoise" baseFrequency="0.0012 0.09" numOctaves="2" seed="8" result="n4"/><feColorMatrix in="n4" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 12 -2.2" result="gap"/><feComposite in="lit" in2="gap" operator="in"/></filter>
+    <symbol id="wm" viewBox="30 -790 3232.0 820"><g filter="url(#paint)"><path d="M760 -760H572V0H760V-301H835V-451H760ZM506 -30V-752H318V-536H248V-752H60V-30ZM318 -386V-180H248V-386Z M1575 -760H1387V0H1575V-321H1650V-471H1575ZM875 -750V-30H1320V-180H1063V-600H1300V-750Z M2392 -752V-301H1710V-752H1898V-676H2204V-752ZM2204 -451V-526H1898V-451ZM2145 -180H2412V-30H1690V-180H1957V-271H2145Z M3222 -760H3035V-420H3222ZM2522 -420Q2679 -420 2764 -438Q2848 -455 2898 -526Q2949 -597 2949 -750H2522V-622H2744Q2744 -580 2676 -560Q2608 -540 2502 -540ZM3222 -140V-390H2542V-280H3035V-250H2542V0H3232V-110H2730V-140Z" fill="#0047AB" stroke="#0047AB" stroke-width="8" stroke-linejoin="round"/></g></symbol>
+    <symbol id="odok" viewBox="0 0 200 200">
+      <path d="M34 138C32 110 60 92 108 92C156 92 182 112 178 140C174 164 148 172 108 172C68 172 36 164 34 138Z" fill="#F7C9A8" stroke="#12333A" stroke-width="5" stroke-linejoin="round"/>
+      <g transform="translate(46 8) scale(.62)"><path mask="url(#holes)" d="M20 112C16 78 46 50 90 44C138 38 184 58 190 98C195 134 160 162 112 166C64 170 24 150 20 112Z" fill="url(#nacre)" stroke="#1B6E73" stroke-width="7" stroke-linejoin="round"/></g>
+      <g fill="none" stroke="#12333A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M78 126L90 133L78 140"/><path d="M138 126L126 133L138 140"/><path d="M96 150Q102 158 108 150Q114 158 120 150"/></g>
+      <ellipse cx="68" cy="146" rx="8" ry="5" fill="#F58FB8" fill-opacity=".8"/><ellipse cx="148" cy="146" rx="8" ry="5" fill="#F58FB8" fill-opacity=".8"/>
+      <g fill="none" stroke="#0047AB" stroke-width="5" stroke-linecap="round"><path d="M24 112L12 104"/><path d="M192 112L204 104"/><path d="M18 140L4 140"/></g>
+    </symbol>
+    <symbol id="shell" viewBox="0 0 120 96">
+      <path d="M14 52C8 28 34 10 66 10c32 0 48 20 42 46-5 22-30 34-56 32C28 86 17 72 14 52Z" fill="url(#nacre)" stroke="#1B6E73" stroke-width="2.6"/>
+      <g fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="2.2" stroke-linecap="round">
+        <path d="M24 54C24 38 42 24 66 24c24 0 34 16 31 32"/>
+        <path d="M36 56C37 46 49 37 66 37c16 0 24 10 22 20"/>
+        <path d="M50 58c1-6 7-10 16-10 8 0 12 5 11 10"/>
+      </g>
+      <g fill="#fff"><circle cx="48" cy="17.5" r="3.1"/><circle cx="60" cy="15" r="3.1"/><circle cx="72" cy="15.4" r="3.1"/><circle cx="83" cy="19.4" r="3.1"/><circle cx="92" cy="26" r="3.1"/></g>
+    </symbol>
+    <symbol id="meat" viewBox="0 0 120 96">
+      <path d="M20 56c0-22 20-38 42-38s40 14 38 36c-2 20-22 28-40 28S20 76 20 56Z" fill="#F0B999"/>
+      <g stroke="#C07A55" stroke-width="2.4" fill="none" stroke-linecap="round"><path d="M36 52c4-10 14-16 26-16"/><path d="M44 66c6 4 14 5 22 3"/><path d="M70 40c8 2 14 8 16 16"/></g>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="hero" data-hide-bar>
+  <svg class="hero__art" viewBox="0 0 200 200" aria-hidden="true" focusable="false">
+    <path pathLength="1" d="M20 112C16 78 46 50 90 44C138 38 184 58 190 98C195 134 160 162 112 166C64 170 24 150 20 112Z"/>
+    <path pathLength="1" d="M34 112C32 94 46 82 62 84C76 86 80 100 72 108C66 114 56 112 55 104"/>
+    <path pathLength="1" d="M96 84C126 80 156 90 170 110"/>
+    <path pathLength="1" d="M92 106C116 104 140 112 154 128"/>
+    <path pathLength="1" d="M96 130C110 130 124 136 134 146"/>
+    <circle cx="112" cy="58" r="6"/><circle cx="134" cy="58" r="6.5"/><circle cx="156" cy="65" r="7"/>
+  </svg>
+  <div class="wrap hero__in">
+    <div class="hero__bar">
+      <a class="brand" href="/" aria-label="바다보길 처음으로"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><use href="#bmark"/></svg><svg class="brand__wm" viewBox="0 0 3232 820" role="img" aria-label="바다보길"><use href="#wm"/></svg></a>
+    </div>
+    <h1 class="hero__title"><span class="l1">깡깡한</span> <span class="l2">전복,</span> <span class="l3">보길도 산지직송 바다보길</span></h1>
+    <p class="hero__lead">물살 센 완도 보길도에서 천천히 자란 단단한 전복을, 양식장에서 바로 주문일 기준 2~3일 이내에 보내드려요.</p>
+    <p class="hero__gloss">깡깡하다는 사투리로 단단하다는 말이에요.</p>
+    <div class="hero__cta">
+      <a class="btn btn--white" href="https://forms.gle/7pdXrsu2LfyX6bJw6" target="_blank" rel="noopener">전복 주문하기</a>
+      <a class="btn btn--line" href="tel:01051000830">전화로 주문하기</a>
+    </div>
+    <p class="hero__note">그날 시세 그대로, 주문하시면 문자로 알려드려요.<br>기본 배송비 3,000원(도서산간 추가 배송비 발생, 2kg 이상 주문 시 무료배송)</p>
+    <div class="hero__inapp" id="inapp" hidden>
+      인스타그램이나 카카오톡 안에서 주문서가 열리지 않으면, 주소를 복사해 크롬이나 사파리에서 열어 주세요.
+      <button type="button" id="copyForm">주문서 주소 복사</button>
+      <span class="sr-only" id="copyFormOk" role="status" aria-live="polite"></span>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="sec sec--white" aria-labelledby="h-why">
+    <div class="wrap">
+      <h2 class="sec__h" id="h-why">산지값 내렸다는 뉴스, 식탁에서 느끼셨나요?</h2>
+      <ul class="fix" role="list">
+        <li>
+          <p class="fix__q">“산지에서는 내렸다는데, 내 장바구니는 그대로예요.”</p>
+          <p class="fix__a">바다보길은 양식장에서 바로 보냅니다.<span>사이에 거치는 단계 없이, 주문하신 날 시세로 금액을 문자로 알려드려요.</span></p>
+        </li>
+        <li>
+          <p class="fix__q">“마트 수족관 전복은 살이 빠져 있던데요.”</p>
+          <p class="fix__a">수확해서 바로 포장하고 발송합니다.<span>수족관에서 기다리는 시간이 없어요. 주문일 기준 2~3일 이내에 보냅니다.</span></p>
+        </li>
+        <li>
+          <p class="fix__q">“손질이 번거로워서 사 먹기가 망설여져요.”</p>
+          <p class="fix__a">손질전복은 껍질과 내장까지 손질해서 보내요.<span>받자마자 굽고, 끓이고, 볶으면 됩니다.</span></p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-direct">
+    <div class="wrap split">
+      <div class="split__l">
+        <h2 class="sec__h" id="h-direct">보길도 바다에서 식탁으로</h2>
+        <p class="pull">한 입 베어 물면, 보길도 바다가 입안 가득.</p>
+        <div class="hcard" role="img" aria-label="이력카드 예시: 키운 어가, 건진 날, 크기를 적는 칸이 있는 카드">
+          <div class="hcard__top"><span class="hcard__brand">바다보길</span><span class="hcard__kind">이력카드</span></div>
+          <div class="hcard__row"><span>키운 어가</span></div>
+          <div class="hcard__row"><span>건진 날</span></div>
+          <div class="hcard__row"><span>크기</span></div>
+          <div class="hcard__band">깡깡한 전복, 바다보길 전복</div>
+        </div>
+        <p class="hcard__cap">상자마다 이런 카드가 들어갑니다.</p>
+      </div>
+      <div>
+        <div class="point">
+          <h3>물살 센 바다, 단단한 식감</h3>
+          <p>천천히 자란 만큼 육질이 단단해서, 씹을수록 오독오독 맛이 올라와요.</p>
+        </div>
+        <div class="point">
+          <h3>손질까지 끝, 바로 요리하세요</h3>
+          <p>껍질과 내장까지 손질해서 보내드려요. 번거로운 손질 없이 바로 굽고, 끓이고, 볶으세요.</p>
+        </div>
+        <div class="point">
+          <h3>값보다 먼저, 바르게 기른 믿음</h3>
+          <p>키운 어가와 건진 날을 이력카드에 적어 보내요. 믿을 수 있는 전복을 제때 받아 드세요.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--tide" id="flow" aria-labelledby="h-flow">
+    <div class="wrap">
+      <h2 class="sec__h" id="h-flow">전복 출하 과정, 양식장에서 문 앞까지</h2>
+      <ol class="flow">
+        <li>
+          <span class="flow__ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M5 31c4-4 8-4 12 0s8 4 12 0 8-4 14 0"/><path d="M5 40c4-4 8-4 12 0s8 4 12 0 8-4 14 0"/><path d="M14 8h20l-3 15H17z"/><path d="M19 8v15M24 8v15M29 8v15"/></svg></span>
+          <span class="flow__n" aria-hidden="true">01</span>
+          <h3>양식장에서 수확</h3>
+        </li>
+        <li>
+          <span class="flow__ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 5c8 10 12 15 12 21a12 12 0 0 1-24 0c0-6 4-11 12-21z"/><path d="M17 28c2-2 4-2 7 0s5 2 7 0"/></svg></span>
+          <span class="flow__n" aria-hidden="true">02</span>
+          <h3>해감·순치 (적응)</h3>
+        </li>
+        <li>
+          <span class="flow__ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 7v30M13 37h22M9 15h30"/><path d="M9 15l-5 12h10zM39 15l-5 12h10z"/></svg></span>
+          <span class="flow__n" aria-hidden="true">03</span>
+          <h3>크기별 선별·계량</h3>
+        </li>
+        <li>
+          <span class="flow__ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M4 14h26v19H4zM30 21h8l6 6v6H30z"/><circle cx="13" cy="35" r="4"/><circle cx="37" cy="35" r="4"/></svg></span>
+          <span class="flow__n" aria-hidden="true">04</span>
+          <h3>포장·배송</h3>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec sec--white" id="size" aria-labelledby="h-size">
+    <div class="wrap">
+      <h2 class="sec__h" id="h-size">손질전복·활전복 고르는 법</h2>
+      <div class="odok"><svg class="odok__fig" viewBox="0 0 200 200" role="img" aria-label="오독이"><use href="#odok"/></svg><p class="odok__say">바로 드실 거면 손질전복, 크기를 고르고 싶으면 활전복!<br>활전복은 숫자가 작을수록 큰 전복이에요.</p></div>
+
+
+      <div class="feat">
+        <svg class="feat__ic" viewBox="0 0 120 96" aria-hidden="true" focusable="false"><use href="#meat"/></svg>
+        <div class="feat__b">
+          <h3 class="feat__h">손질전복 <span class="feat__n">8개</span></h3>
+          <p class="feat__p">껍질과 내장까지 손질해서 보내드려요. 구이, 죽, 볶음, 어떤 요리든 바로 조리하세요.</p>
+        </div>
+      </div>
+      <h3 class="live__h">통째로 받고 싶다면, 활전복 크기로 고르세요</h3>
+      <table class="sizes" role="table">
+        <caption class="sr">활전복 크기별 마릿수, 무게, 어울리는 요리</caption>
+        <thead>
+          <tr role="row"><th role="columnheader" scope="col"><span class="sr">그림</span></th><th role="columnheader" scope="col">크기</th><th role="columnheader" scope="col">어울리는 요리</th><th role="columnheader" scope="col">1kg 기준</th><th role="columnheader" scope="col">한 마리 무게</th></tr>
+        </thead>
+        <tbody>
+          <tr class="size" role="row">
+            <td class="size__art" role="cell"><svg style="width:65px" viewBox="0 0 200 200" aria-hidden="true"><use href="#bmark"/></svg></td>
+            <td class="size__name" role="cell"><span class="size__no">4~6미</span><span class="size__tag">자이언트</span></td>
+            <td class="size__use" role="cell">회, 접대용</td>
+            <td class="size__cnt" role="cell">1kg에 4~6마리</td>
+            <td class="size__wt" role="cell">한 마리 167~250g</td>
+          </tr>
+          <tr class="size" role="row">
+            <td class="size__art" role="cell"><svg style="width:56px" viewBox="0 0 200 200" aria-hidden="true"><use href="#bmark"/></svg></td>
+            <td class="size__name" role="cell"><span class="size__no">7~8미</span><span class="size__tag">특대</span></td>
+            <td class="size__use" role="cell">회, 스테이크, 선물용</td>
+            <td class="size__cnt" role="cell">1kg에 7~8마리</td>
+            <td class="size__wt" role="cell">한 마리 125~143g</td>
+          </tr>
+          <tr class="size" role="row">
+            <td class="size__art" role="cell"><svg style="width:52px" viewBox="0 0 200 200" aria-hidden="true"><use href="#bmark"/></svg></td>
+            <td class="size__name" role="cell"><span class="size__no">9~10미</span><span class="size__tag">대</span></td>
+            <td class="size__use" role="cell">회, 버터구이, 찜</td>
+            <td class="size__cnt" role="cell">1kg에 9~10마리</td>
+            <td class="size__wt" role="cell">한 마리 100~111g</td>
+          </tr>
+          <tr class="size" role="row">
+            <td class="size__art" role="cell"><svg style="width:49px" viewBox="0 0 200 200" aria-hidden="true"><use href="#bmark"/></svg></td>
+            <td class="size__name" role="cell"><span class="size__no">11~12미</span><span class="size__tag">중</span></td>
+            <td class="size__use" role="cell">전복장</td>
+            <td class="size__cnt" role="cell">1kg에 11~12마리</td>
+            <td class="size__wt" role="cell">한 마리 83~91g</td>
+          </tr>
+          <tr class="size" role="row">
+            <td class="size__art" role="cell"><svg style="width:46px" viewBox="0 0 200 200" aria-hidden="true"><use href="#bmark"/></svg></td>
+            <td class="size__name" role="cell"><span class="size__no">13~14미</span><span class="size__tag">소</span></td>
+            <td class="size__use" role="cell">죽, 물회</td>
+            <td class="size__cnt" role="cell">1kg에 13~14마리</td>
+            <td class="size__wt" role="cell">한 마리 71~77g</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="sizes__foot">4~14미는 껍데기째 보내는 활전복 크기입니다. 한 마리 무게는 1kg을 마릿수로 나눈 값이라 개체마다 조금씩 다릅니다.</p>
+
+      <div class="tips">
+        <p>죽 끓이실 거면 작은 걸 사세요. 큰 전복은 죽에 쓰기엔 아깝습니다.</p>
+        <p>크기를 못 고르시겠으면 몇 분이 드실지, 뭘 해 드실지만 알려 주세요. 맞춰 담아 드립니다.</p>
+        <a class="btn btn--solid" href="https://forms.gle/7pdXrsu2LfyX6bJw6" target="_blank" rel="noopener">주문서에 적어 보내기</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="order" aria-labelledby="h-order">
+    <div class="wrap">
+      <h2 class="sec__h" id="h-order">전복 주문 방법, 이렇게 쉬워요</h2>
+      <div class="odok"><svg class="odok__fig" viewBox="0 0 200 200" role="img" aria-label="오독이"><use href="#odok"/></svg><p class="odok__say">네 걸음이면 끝! 오독오독 맛있게 보내 드릴게요</p></div>
+      <ol class="steps">
+        <li>
+          <span class="steps__ic"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="11" y="6" width="26" height="36" rx="4"/><path d="M17 17h14M17 24h14M17 31h8"/></svg><b class="steps__n" aria-hidden="true">1</b></span>
+          <div class="steps__b"><h3>주문서 쓰기</h3><ul class="chips"><li>크기</li><li>수량</li><li>받는 곳</li></ul></div>
+        </li>
+        <li>
+          <span class="steps__ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 11h34a2 2 0 0 1 2 2v19a2 2 0 0 1-2 2H22l-9 7v-7H7a2 2 0 0 1-2-2V13a2 2 0 0 1 2-2z"/><path d="M14 20h20M14 27h11"/></svg><b class="steps__n" aria-hidden="true">2</b></span>
+          <div class="steps__b"><h3>금액 문자 받기</h3><ul class="chips"><li>그날 시세 + 배송비</li></ul></div>
+        </li>
+        <li>
+          <span class="steps__ic"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="18"/><path d="M14 17l5 15 5-15 5 15 5-15M13 22h22M13 27h22"/></svg><b class="steps__n" aria-hidden="true">3</b></span>
+          <div class="steps__b"><h3>1일 안에 입금</h3><ul class="chips"><li>계좌이체</li><li>결제 링크 (카드·간편결제)</li></ul><p class="steps__warn">기한 안에 입금이 없으면 자동 취소</p></div>
+        </li>
+        <li>
+          <span class="steps__ic"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M6 15l18-9 18 9v18L24 42 6 33z"/><path d="M6 15l18 9 18-9M24 24v18"/></svg><b class="steps__n" aria-hidden="true">4</b></span>
+          <div class="steps__b"><h3>어가에서 발송</h3><ul class="chips"><li class="chip--key">주문일 기준 2~3일</li><li>결항 시 최대 5일</li><li>배송비 3,000원, 2kg 이상 무료</li></ul></div>
+        </li>
+      </ol>
+
+      <div class="pay" id="pay">
+        <p class="pay__h">입금 계좌</p>
+        <p class="pay__bank">우리은행</p>
+        <p class="pay__no" id="acct">1005-104-963646</p>
+        <p class="pay__who">예금주 박영수(바다보길)</p>
+        <div class="pay__row">
+          <button class="btn btn--ghost btn--small" type="button" id="copyAcct">계좌번호 복사</button>
+          <span class="pay__ok" id="copyOk" role="status" aria-live="polite"></span>
+        </div>
+        <p class="pay__warn">금액 안내 문자를 받은 뒤에 입금해 주세요.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--white" id="faq" aria-labelledby="h-faq">
+    <div class="wrap">
+      <h2 class="sec__h" id="h-faq">전복 주문·배송 자주 묻는 질문</h2>
+      <div class="faq">
+        <div class="faq__g" role="group" aria-labelledby="fg0"><h3 class="faq__gh" id="fg0">상품</h3>
+        <details><summary>어디에서 키운 전복인가요?</summary><div class="faq__a">전남 완도군 보길도 바다 양식장에서 어가가 키운 전복입니다. 상자에 키운 어가와 건진 날을 적은 이력카드를 함께 넣어 보냅니다.</div></details>
+        <details><summary>손질전복은 어떻게 손질해서 오나요?</summary><div class="faq__a">껍질과 내장까지 손질해서 보내 드립니다. 손질 없이 바로 조리하실 수 있어요. 통째로 받고 싶으시면 주문서에서 활전복 크기를 고르세요.</div></details>
+        <details><summary>시장이나 마트 전복과 뭐가 다른가요?</summary><div class="faq__a">물살이 센 보길도 바다에서 천천히 자라 육질이 단단합니다. 또 수족관에서 오래 머문 전복은 먹이를 먹지 못해 살이 빠지기 쉬운데, 바다보길은 양식장에서 수확해 바로 포장·발송합니다.</div></details>
+        <details><summary>전복 크기는 요리별로 어떻게 고르나요?</summary><div class="faq__a">활전복은 회·접대용은 4~6미(자이언트), 회·스테이크·선물용은 7~8미(특대), 회·버터구이·찜은 9~10미(대), 전복장은 11~12미(중), 죽·물회는 13~14미(소)가 어울립니다. 미는 1kg에 들어가는 마릿수라서 숫자가 작을수록 큰 전복입니다.</div></details>
+        <details><summary>크기를 못 고르겠어요.</summary><div class="faq__a">주문서의 크기에서 ‘잘 모르겠어요’를 고르고, 몇 분이 드실지와 해 드실 요리를 적어 주세요. 맞춰 담아 드립니다.</div></details>
+        </div>
+        <div class="faq__g" role="group" aria-labelledby="fg1"><h3 class="faq__gh" id="fg1">결제</h3>
+        <details><summary>가격은 얼마인가요?</summary><div class="faq__a">전복 값은 그날 시세에 따라 달라서, 주문서를 보내 주시면 그날 금액을 문자로 안내해 드립니다. 금액을 확인하신 뒤에 입금하시면 됩니다.</div></details>
+        <details><summary>어떻게 결제하나요?</summary><div class="faq__a">계좌이체로 받습니다. 금액 안내 문자에 결제 링크를 함께 보내 드리면 카드나 간편결제로도 결제하실 수 있습니다.</div></details>
+        <details><summary>입금은 언제까지 해야 하나요?</summary><div class="faq__a">금액 안내 문자를 받은 날로부터 1일 안에 입금해 주세요. 입금이 없으면 주문은 자동으로 취소됩니다. 금액은 안내 문자로 확정되니, 문자를 받으신 뒤에 입금해 주세요.</div></details>
+        </div>
+        <div class="faq__g" role="group" aria-labelledby="fg2"><h3 class="faq__gh" id="fg2">배송과 교환</h3>
+        <details><summary>언제 받을 수 있나요?</summary><div class="faq__a">주문일 기준 2~3일 이내에 발송합니다. 결항 등으로 배가 뜨지 못하면 최대 5일까지 걸릴 수 있고, 이 경우 따로 연락드립니다.</div></details>
+        <details><summary>배송비는 얼마인가요?</summary><div class="faq__a">기본 배송비는 3,000원입니다. 2kg 이상 주문하시면 무료배송이고, 도서산간 지역은 추가 배송비가 발생합니다. 배송비는 금액 안내 문자에 함께 적어 드립니다.</div></details>
+        <details><summary>선물로 보낼 수 있나요?</summary><div class="faq__a">주문서에 받는 분 이름과 주소를 따로 적으시면 그분께 바로 보냅니다.</div></details>
+        <details><summary>받았는데 상태가 이상해요.</summary><div class="faq__a">받으시면 바로 상태를 확인해 주시고, 문제가 있으면 사진과 함께 010-5100-0830으로 알려 주세요. 확인한 뒤 교환이나 환불로 처리해 드립니다. 신선식품이라 단순 변심으로는 반품이 어렵습니다.</div></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="close" data-hide-bar aria-labelledby="h-close">
+    <div class="wrap">
+      <h2 class="close__h" id="h-close"><span>보길도 산지직송 바다보길,</span> <span>집에서 싱싱하게 받아보길.</span></h2>
+      <p class="close__p">주문서 한 장이면 시작! 크기가 고민이면 몇 분이 드실지만 알려 주세요.</p>
+      <div class="close__cta">
+        <a class="btn btn--white" href="https://forms.gle/7pdXrsu2LfyX6bJw6" target="_blank" rel="noopener">전복 주문하기</a>
+        <a class="btn btn--line" href="tel:01051000830">전화로 주문하기</a>
+      </div>
+      <p class="close__sign"><span>바다보길 보길씨</span> <a class="close__tel" href="tel:01051000830">010-5100-0830</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot" data-hide-bar>
+  <div class="wrap">
+    <p class="foot__brand"><svg class="sym-s" viewBox="0 0 200 200" aria-hidden="true" focusable="false"><use href="#bmark"/></svg><span>바다보길</span></p>
+    <p class="foot__links"><a href="/privacy.html">개인정보 처리방침</a><span aria-hidden="true">|</span><a href="#order">이용안내</a></p>
+    <p class="foot__info">
+      <span>상호 : 바다보길</span><span>대표 : 박영수</span><span>사업자등록번호 : 225-09-25660</span><span>통신판매업 신고번호 : <b id="reg-no">발급 후 기재</b></span><span>주소 : 전남광주통합특별시 완도군 보길면 부황길 31</span><span>전화 : <a href="tel:01051000830">010-5100-0830</a></span>
+    </p>
+    <p class="foot__copy">© 2026 바다보길. All rights reserved.</p>
+  </div>
+</footer>
+
+<nav class="bar" id="bar" aria-label="주문 바로가기">
+  <a class="btn btn--solid" href="https://forms.gle/7pdXrsu2LfyX6bJw6" target="_blank" rel="noopener">전복 주문하기</a>
+  <a class="btn btn--ghost" href="tel:01051000830" aria-label="전화하기 010-5100-0830">전화</a>
+</nav>
+
+<script>
+(function(){
+  var FORM = 'https://forms.gle/7pdXrsu2LfyX6bJw6';
+
+  function copyText(text){
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(text);
+    }
+    return new Promise(function(resolve, reject){
+      try {
+        var t = document.createElement('textarea');
+        t.value = text; t.setAttribute('readonly',''); t.style.position='fixed'; t.style.opacity='0';
+        document.body.appendChild(t); t.select();
+        var ok = document.execCommand('copy');
+        document.body.removeChild(t);
+        ok ? resolve() : reject();
+      } catch (e) { reject(e); }
+    });
+  }
+
+  var acctBtn = document.getElementById('copyAcct');
+  var okEl = document.getElementById('copyOk');
+  var timer;
+  if (acctBtn) acctBtn.addEventListener('click', function(){
+    var num = document.getElementById('acct').textContent.trim();
+    copyText(num).then(function(){
+      okEl.textContent = '복사했어요. 은행 앱에 붙여 넣으세요.';
+    }, function(){
+      okEl.textContent = '복사가 안 돼요. 번호를 길게 눌러 복사해 주세요.';
+    });
+    clearTimeout(timer);
+    timer = setTimeout(function(){ okEl.textContent = ''; }, 4000);
+  });
+
+  var ua = navigator.userAgent || '';
+  if (/KAKAOTALK|Instagram|FBAN|FBAV|NAVER\(inapp|DaumApps|Line\//i.test(ua)) {
+    var box = document.getElementById('inapp');
+    if (box) box.hidden = false;
+  }
+  var cf = document.getElementById('copyForm');
+  if (cf) cf.addEventListener('click', function(){
+    var st = document.getElementById('copyFormOk'), t0 = cf.textContent;
+    copyText(FORM).then(function(){
+      cf.textContent = '복사했어요'; if (st) st.textContent = '주문서 주소를 복사했어요.';
+      setTimeout(function(){ cf.textContent = t0; if (st) st.textContent = ''; }, 2500);
+    }, function(){
+      cf.textContent = FORM; if (st) st.textContent = '복사가 안 돼요. 화면에 보이는 주소를 길게 눌러 복사해 주세요.';
+    });
+  });
+
+  var bar = document.getElementById('bar');
+  var hiders = document.querySelectorAll('[data-hide-bar]');
+  if (bar && 'IntersectionObserver' in window) {
+    var seen = new Set();
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ e.isIntersecting ? seen.add(e.target) : seen.delete(e.target); });
+      bar.classList.toggle('is-on', seen.size === 0);
+    }, {threshold: 0.12});
+    hiders.forEach(function(el){ io.observe(el); });
+  } else if (bar) {
+    bar.classList.add('is-on');
+  }
+})();
+</script>
+</body>
+</html>
