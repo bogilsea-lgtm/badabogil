@@ -74,13 +74,25 @@
     <p class="foot__copy">© 2026 바다보길. All rights reserved.</p>
   </div>
 </footer>
+<script src="/shop.js"></script>
 <script>
 (function(){
-  var q=new URLSearchParams(location.search);
-  document.getElementById('rOid').textContent=q.get('orderId')||'-';
-  var a=q.get('amount'); document.getElementById('rAmt').textContent=a?Number(a).toLocaleString('ko-KR')+'원':'-';
-  // 주의: 토스 결제 승인(confirm) API는 서버에서 시크릿 키로 호출해야 합니다.
-  // 이 정적 사이트에는 서버가 없어 승인 호출이 연결되어 있지 않습니다(실제 판매 전 필수).
+  var q=new URLSearchParams(location.search), B=window.BDBG;
+  var oid=q.get('orderId'), pk=q.get('paymentKey'), amt=q.get('amount');
+  var h=document.querySelector('.result .h1'), msg=document.querySelector('.result > p');
+  document.getElementById('rOid').textContent=oid||'-';
+  document.getElementById('rAmt').textContent=amt?Number(amt).toLocaleString('ko-KR')+'원':'-';
+  function fail(t){ h.textContent='결제 승인에 실패했어요'; msg.textContent=t+' 카드 결제는 확정되지 않았습니다. 다시 시도하거나 하단 사업자 정보의 연락처로 문의해 주세요.'; }
+  if(!B.CONFIG.CONFIRM_URL){ h.textContent='결제 승인 서버가 연결되지 않았어요'; msg.textContent='테스트 단계라 결제가 확정되지 않았습니다.'; return; }
+  if(!oid||!pk||!amt){ fail('결제 정보가 없습니다.'); return; }
+  h.textContent='결제를 확인하고 있어요'; msg.textContent='잠시만 기다려 주세요.';
+  fetch(B.CONFIG.CONFIRM_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({paymentKey:pk,orderId:oid,amount:Number(amt)})})
+    .then(function(r){return r.json().then(function(d){return {ok:r.ok,d:d};});})
+    .then(function(x){
+      if(x.ok){ h.textContent='결제가 완료되었어요'; msg.textContent='주문이 접수되었습니다. 발송 준비가 되면 문자로 안내해 드립니다.'; }
+      else fail(x.d.message||'');
+    })
+    .catch(function(){ fail('서버에 연결하지 못했습니다.'); });
 })();
 </script>
 </body>
