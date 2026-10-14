@@ -3,10 +3,10 @@
   'use strict';
 
   var CONFIG = {
-    // 토스페이먼츠 클라이언트 키. 개발자센터 API 키 메뉴의 '주문서형·결제창형 연동 키'(test_gck_)입니다. 승인 서버는 짝이 되는 test_gsk_ 를 씁니다.
+    // 토스페이먼츠 클라이언트 키(API 개별 연동 키, test_ck_). 승인 서버는 짝이 되는 test_sk_ 를 씁니다.
     // 바다보길 상점의 테스트 클라이언트 키입니다(공개되어도 되는 키). 시크릿 키는 절대 여기에 넣지 마세요.
     // 실제 판매 전에는 라이브 키(live_ck_)로 바꾸고, 결제 승인 서버를 연결해야 합니다.
-    TOSS_CLIENT_KEY: 'test_gck_5OWRapdA8dwZ1vAxoOoBro1zEqZK',
+    TOSS_CLIENT_KEY: 'test_ck_5OWRapdA8dYpXOxpXzEn3o1zEqZK',
     // 결제 승인 서버 함수 주소(netlify-api/README.md 참고). 비어 있으면 승인 호출을 하지 않습니다.
     CONFIRM_URL: 'https://amazing-nougat-11ed04.netlify.app/.netlify/functions/confirm',
     TEST_MODE: true, // true면 주문서에 "결제 테스트 단계" 안내를 보여 줍니다. 실제 판매 시작 때 false.
