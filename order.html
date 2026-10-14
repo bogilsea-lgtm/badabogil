@@ -201,22 +201,31 @@
     try{
       sessionStorage.setItem('bdbg:order:'+id,JSON.stringify({qty:cc.qty,total:cc.total,rName:$('rName').value.trim(),rAddr:($('rAddr').value+' '+$('rAddr2').value).trim()}));
     }catch(e){}
-    var payment=window.TossPayments(B.CONFIG.TOSS_CLIENT_KEY).payment({customerKey:window.TossPayments.ANONYMOUS});
-    payment.requestPayment({
-      method:'CARD',
-      amount:{currency:'KRW',value:cc.total},
-      orderId:id,
-      orderName:P.name+(cc.qty>1?' 외 '+(cc.qty-1)+'건':''),
-      successUrl:location.origin+'/success.html',
-      failUrl:location.origin+'/fail.html',
-      customerName:$('bName').value.trim(),
-      customerEmail:$('bMail').value.trim(),
-      customerMobilePhone:digits($('bTel').value),
-      card:{useEscrow:false,flowMode:'DEFAULT',useCardPoint:false,useAppCardOnly:false}
-    }).catch(function(e){
+    function reset(msg){
       paying=false; $('payBtn').disabled=false; $('payBtn').textContent='결제하기';
-      if(e&&e.code!=='USER_CANCEL') alert('결제를 진행하지 못했어요. '+(e&&e.message?e.message:''));
-    });
+      if(msg) alert(msg);
+    }
+    try{
+      var payment=window.TossPayments(B.CONFIG.TOSS_CLIENT_KEY).payment({customerKey:window.TossPayments.ANONYMOUS});
+      payment.requestPayment({
+        method:'CARD',
+        amount:{currency:'KRW',value:cc.total},
+        orderId:id,
+        orderName:P.name+(cc.qty>1?' 외 '+(cc.qty-1)+'건':''),
+        successUrl:location.origin+'/success.html',
+        failUrl:location.origin+'/fail.html',
+        customerName:$('bName').value.trim(),
+        customerEmail:$('bMail').value.trim(),
+        customerMobilePhone:digits($('bTel').value),
+        card:{useEscrow:false,flowMode:'DEFAULT',useCardPoint:false,useAppCardOnly:false}
+      }).catch(function(e){
+        console.error('toss requestPayment', e);
+        reset(e&&e.code==='USER_CANCEL' ? '' : '결제를 진행하지 못했어요. '+(e&&e.code?'['+e.code+'] ':'')+(e&&e.message?e.message:''));
+      });
+    }catch(e){
+      console.error('toss init', e);
+      reset('결제창을 열지 못했어요. '+(e&&e.code?'['+e.code+'] ':'')+(e&&e.message?e.message:''));
+    }
   });
 })();
 </script>
