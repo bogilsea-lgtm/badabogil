@@ -51,11 +51,11 @@
     </symbol>
   </defs>
 </svg>
-<header class="top"><div class="wrap"><a class="brand" href="/" aria-label="바다보길 처음으로"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><use href="#isle"/></svg><svg class="brand__wm" viewBox="26 46 3688 1223" role="img" aria-label="바다보길"><use href="#wm2"/></svg></a><a class="top__tel" href="tel:01051000830">010-5100-0830</a></div></header>
+<header class="top"><div class="wrap"><a class="brand" href="/" aria-label="바다보길 처음으로"><svg viewBox="0 0 200 200" aria-hidden="true" focusable="false"><use href="#isle"/></svg><svg class="brand__wm" viewBox="26 46 3688 1223" role="img" aria-label="바다보길"><use href="#wm2"/></svg></a></div></header>
 <main id="main" class="page"><div class="wrap">
   <p class="crumb"><a href="/shop.html">상품으로 돌아가기</a></p>
   <h1 class="h1" style="margin-bottom:24px">주문서</h1>
-  <p class="notice notice--test" id="testNote" hidden style="margin-bottom:22px">현재 결제 테스트 단계입니다. 실제 주문은 <a href="/#order">주문서</a>나 전화(010-5100-0830)로 받고 있어요.</p>
+  <p class="notice notice--test" id="testNote" hidden style="margin-bottom:22px">현재 결제 테스트 단계입니다. 실제 주문은 <a href="/#order">주문서</a>로 받고 있어요.</p>
   <form class="order" id="orderForm" novalidate>
     <div class="stack">
       <section class="card" aria-labelledby="o1">
@@ -85,7 +85,7 @@
         <div class="fld"><label for="rAddr">주소</label><input id="rAddr" name="rAddr" autocomplete="shipping street-address" required><p class="fld__err" id="e-rAddr" role="alert"></p></div>
         <div class="fld"><label for="rAddr2">상세 주소</label><input id="rAddr2" name="rAddr2" autocomplete="shipping address-line2"></div>
         <div class="fld"><label for="rMemo">배송 요청사항 (선택)</label><input id="rMemo" name="rMemo"></div>
-        <p class="note" style="margin-top:14px">제주·도서산간 지역은 추가 배송비가 발생합니다. 해당 지역은 주문 전에 전화(010-5100-0830)로 먼저 알려 주세요.</p>
+        <p class="note" style="margin-top:14px">제주·도서산간 지역은 추가 배송비가 발생합니다. 해당 지역은 주문 전에 하단 사업자 정보의 연락처로 먼저 알려 주세요.</p>
       </section>
     </div>
 
@@ -192,7 +192,7 @@
     ev.preventDefault();
     if(paying||!validate()) return;
     if(!window.TossPayments){
-      alert('결제창을 불러오지 못했어요. 잠시 후 다시 시도하거나 전화(010-5100-0830)로 주문해 주세요.');
+      alert('결제창을 불러오지 못했어요. 잠시 후 다시 시도하거나 메인 페이지의 주문서로 주문해 주세요.');
       return;
     }
     paying=true; $('payBtn').disabled=true; $('payBtn').textContent='결제창 여는 중...';
