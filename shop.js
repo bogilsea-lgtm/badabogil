@@ -4,9 +4,9 @@
 
   var CONFIG = {
     // 토스페이먼츠 클라이언트 키(결제창 연동용 test_ck_ 키). 개발자센터의 본인 테스트 키로 교체하세요.
-    // 아래 값은 토스 공개 문서 예제 키로 기억해 둔 것이며 직접 확인하지 못했습니다.
+    // 바다보길 상점의 테스트 클라이언트 키입니다(공개되어도 되는 키). 시크릿 키는 절대 여기에 넣지 마세요.
     // 실제 판매 전에는 라이브 키(live_ck_)로 바꾸고, 결제 승인 서버를 연결해야 합니다.
-    TOSS_CLIENT_KEY: 'test_ck_D5GePWvyJnrK0W0k6q8gLzN97Eoq',
+    TOSS_CLIENT_KEY: 'test_ck_5OWRapdA8dYpXOxpXzEn3o1zEqZK',
     // 결제 승인 서버 함수 주소(netlify-api/README.md 참고). 비어 있으면 승인 호출을 하지 않습니다.
     CONFIRM_URL: '',
     TEST_MODE: true, // true면 주문서에 "결제 테스트 단계" 안내를 보여 줍니다. 실제 판매 시작 때 false.
