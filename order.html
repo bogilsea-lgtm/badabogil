@@ -197,36 +197,58 @@
       return;
     }
     paying=true; $('payBtn').disabled=true; $('payBtn').textContent='결제창 여는 중...';
-    var cc=B.calc(qty); // 서버 없이 금액을 다시 계산: 화면 표시와 결제 금액이 항상 같다
+    var cc=B.calc(qty);
     var id=orderId();
-    try{
-      sessionStorage.setItem('bdbg:order:'+id,JSON.stringify({qty:cc.qty,total:cc.total,rName:$('rName').value.trim(),rAddr:($('rAddr').value+' '+$('rAddr2').value).trim()}));
-    }catch(e){}
     function reset(msg){
       paying=false; $('payBtn').disabled=false; $('payBtn').textContent='결제하기';
       if(msg) alert(msg);
     }
-    try{
-      var payment=window.TossPayments(B.CONFIG.TOSS_CLIENT_KEY).payment({customerKey:window.TossPayments.ANONYMOUS});
-      payment.requestPayment({
-        method:'CARD',
-        amount:{currency:'KRW',value:cc.total},
-        orderId:id,
-        orderName:P.name+(cc.qty>1?' 외 '+(cc.qty-1)+'건':''),
-        successUrl:location.origin+'/success.html',
-        failUrl:location.origin+'/fail.html',
-        customerName:$('bName').value.trim(),
-        customerEmail:$('bMail').value.trim(),
-        customerMobilePhone:digits($('bTel').value),
-        card:{useEscrow:false,flowMode:'DEFAULT',useCardPoint:false,useAppCardOnly:false}
-      }).catch(function(e){
-        console.error('toss requestPayment', e);
-        reset(e&&e.code==='USER_CANCEL' ? '' : '결제를 진행하지 못했어요. '+(e&&e.code?'['+e.code+'] ':'')+(e&&e.message?e.message:''));
-      });
-    }catch(e){
-      console.error('toss init', e);
-      reset('결제창을 열지 못했어요. '+(e&&e.code?'['+e.code+'] ':'')+(e&&e.message?e.message:''));
+    function openPay(){
+      $('payBtn').textContent='결제창 여는 중...';
+      try{
+        var payment=window.TossPayments(B.CONFIG.TOSS_CLIENT_KEY).payment({customerKey:window.TossPayments.ANONYMOUS});
+        payment.requestPayment({
+          method:'CARD',
+          amount:{currency:'KRW',value:cc.total},
+          orderId:id,
+          orderName:P.name+(cc.qty>1?' 외 '+(cc.qty-1)+'건':''),
+          successUrl:location.origin+'/success.html',
+          failUrl:location.origin+'/fail.html',
+          customerName:$('bName').value.trim(),
+          customerEmail:$('bMail').value.trim(),
+          customerMobilePhone:digits($('bTel').value),
+          card:{useEscrow:false,flowMode:'DEFAULT',useCardPoint:false,useAppCardOnly:false}
+        }).catch(function(e){
+          console.error('toss requestPayment', e);
+          reset(e&&e.code==='USER_CANCEL' ? '' : '결제를 진행하지 못했어요. '+(e&&e.code?'['+e.code+'] ':'')+(e&&e.message?e.message:''));
+        });
+      }catch(e){
+        console.error('toss init', e);
+        reset('결제창을 열지 못했어요. '+(e&&e.code?'['+e.code+'] ':'')+(e&&e.message?e.message:''));
+      }
     }
+    // 결제창을 열기 전에 주문 정보를 서버에 저장합니다. 저장되지 않으면 결제를 시작하지 않습니다.
+    $('payBtn').textContent='주문 접수 중...';
+    var ctl=window.AbortController?new AbortController():null;
+    var timer=setTimeout(function(){if(ctl)ctl.abort()},20000);
+    fetch(B.CONFIG.ORDER_URL,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({orderId:id,qty:cc.qty,bName:$('bName').value,bTel:digits($('bTel').value),bMail:$('bMail').value,
+        rName:$('rName').value,rTel:digits($('rTel').value),rZip:digits($('rZip').value),rAddr:$('rAddr').value,rAddr2:$('rAddr2').value,rMemo:$('rMemo').value}),
+      signal:ctl?ctl.signal:undefined
+    }).then(function(r){
+      clearTimeout(timer);
+      if(!r.ok) throw new Error('order '+r.status);
+      return r.json();
+    }).then(function(j){
+      if(!j||j.ok!==true) throw new Error('order not ok');
+      openPay();
+    }).catch(function(e){
+      clearTimeout(timer);
+      console.error('order save', e);
+      reset('주문 정보를 접수하지 못했어요. 잠시 후 다시 시도하거나 하단 사업자 정보의 연락처로 문의해 주세요. 결제는 진행되지 않았습니다.');
+    });
   });
 })();
 </script>
