@@ -227,10 +227,11 @@
         reset('결제창을 열지 못했어요. '+(e&&e.code?'['+e.code+'] ':'')+(e&&e.message?e.message:''));
       }
     }
-    // 결제창을 열기 전에 주문 정보를 서버에 저장합니다. 저장되지 않으면 결제를 시작하지 않습니다.
+    // 결제창을 열기 전에 주문 정보를 서버에 저장합니다.
+    // CONFIG.REQUIRE_ORDER_SAVE 가 true 이면 저장 실패 시 결제를 시작하지 않고, false 이면(심사 기간) 저장 실패와 관계없이 결제창을 엽니다.
     $('payBtn').textContent='주문 접수 중...';
     var ctl=window.AbortController?new AbortController():null;
-    var timer=setTimeout(function(){if(ctl)ctl.abort()},20000);
+    var timer=setTimeout(function(){if(ctl)ctl.abort()},B.CONFIG.REQUIRE_ORDER_SAVE?20000:6000);
     fetch(B.CONFIG.ORDER_URL,{
       method:'POST',
       headers:{'Content-Type':'application/json'},
@@ -247,6 +248,7 @@
     }).catch(function(e){
       clearTimeout(timer);
       console.error('order save', e);
+      if(!B.CONFIG.REQUIRE_ORDER_SAVE){ openPay(); return; }
       reset('주문 정보를 접수하지 못했어요. 잠시 후 다시 시도하거나 하단 사업자 정보의 연락처로 문의해 주세요. 결제는 진행되지 않았습니다.');
     });
   });

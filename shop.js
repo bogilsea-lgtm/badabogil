@@ -10,6 +10,7 @@
     // 결제 승인 서버 함수 주소(netlify-api/README.md 참고). 비어 있으면 승인 호출을 하지 않습니다.
     ORDER_URL: 'https://amazing-nougat-11ed04.netlify.app/.netlify/functions/order',
   CONFIRM_URL: 'https://amazing-nougat-11ed04.netlify.app/.netlify/functions/confirm',
+    REQUIRE_ORDER_SAVE: false, // 심사 기간: 주문 저장이 실패해도 결제창을 엽니다. 시트·메일 설정을 마친 뒤 true 로 바꾸세요.
     TEST_MODE: true, // true면 주문서에 "결제 테스트 단계" 안내를 보여 줍니다. 실제 판매 시작 때 false.
     PRODUCT: {
       id: 'live-9-10',
