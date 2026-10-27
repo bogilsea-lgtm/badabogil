@@ -69,7 +69,7 @@ function nextRow(sh) {
 function textFormula(row) {
   var c = function (h) { return columnLetter(COL[h]) + row; };
   return '=IF(OR(' + c('택배사') + '="",' + c('운송장번호') + '=""),"",' +
-    c('받는 분') + '&"님, 바다보길입니다. 주문하신 활전복을 보냈습니다. ' +
+    c('받는 분') + '&"님, 바다보길입니다. 주문하신 전복을 보냈습니다. ' +
     '"&' + c('택배사') + '&" 운송장 "&' + c('운송장번호') + '&" 입니다. 받으시면 바로 확인해 주세요.")';
 }
 
