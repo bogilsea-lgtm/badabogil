@@ -136,3 +136,28 @@ ul,ol{padding:0;list-style:none}
   .foot__info span{white-space:normal}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+/* ===== v2: 메인 페이지와 같은 톤 (명조 제목, 얇은 선, 넓은 여백) ===== */
+:root{--f-display:'Noto Serif KR','Noto Serif CJK KR','Apple SD Gothic Neo',serif;--stone:#44575A;--line:rgba(14,59,66,.16);--line-strong:rgba(14,59,66,.32);--r-card:18px}
+.h1,.h2,.price,.sum__row--total b,.foot__brand span{font-weight:500}
+.h1{font-size:clamp(30px,6.4vw,46px);line-height:1.22;letter-spacing:-.025em}
+.top{background:var(--mist);border-bottom:1px solid var(--line)}
+.page{padding-block:44px 104px}
+@media (min-width:760px){.page{padding-block:64px 136px}}
+.stack>*+*{margin-top:28px}
+.card{border:1px solid var(--line)}
+.notice{border-width:1px;border-color:var(--line-strong)}
+.notice--test{border-color:var(--flame)}
+.spec,.sum__row--total,.agree .agree__all{border-color:var(--line)}
+.tbl th,.tbl td{border-bottom-color:var(--line)}
+.tbl{border:1px solid var(--line)}
+.stepper{border-width:1.5px;border-color:var(--line-strong)}
+.fld input,.fld select{border-width:1.5px;border-color:var(--line-strong)}
+.pay-method{border-width:1.5px;border-color:var(--line-strong)}
+.sum__row--total b{color:var(--stone)}
+.stack ol{list-style:decimal;padding-left:1.4em}
+.stack ul{list-style:disc;padding-left:1.2em}
+.stack li+li{margin-top:10px}
+.pdp__img{border-radius:var(--r-card)}
+.btn--solid{box-shadow:0 1px 2px rgba(6,40,46,.28),0 8px 18px -6px rgba(46,124,138,.4)}
+.btn--solid:active{box-shadow:none}
