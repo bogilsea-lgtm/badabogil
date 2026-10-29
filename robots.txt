@@ -1,3 +1,26 @@
 User-agent: *
 Allow: /
+
+# 검색·AI 답변 크롤러 허용
+User-agent: Googlebot
+Allow: /
+User-agent: Yeti
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: GPTBot
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://badabogil.com/sitemap.xml
