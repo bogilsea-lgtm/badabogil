@@ -46,6 +46,11 @@ ul,ol{padding:0;list-style:none}
 .sec{padding-block:clamp(56px,9vw,104px);background:var(--mist)}
 .sec--white{background:#fff}
 .vid{border-radius:var(--r);overflow:hidden;background:var(--surf)}.vid video{display:block;width:100%;height:auto;aspect-ratio:16/9}
+.tgsec{padding-block:clamp(72px,14vw,160px)}
+.tg{font:700 clamp(2rem,8.4vw,3.75rem)/1.3 var(--f-serif);letter-spacing:-.04em;max-width:15em;text-wrap:balance;color:var(--deep)}
+.tg--js .tgw{opacity:.28;transition:opacity .7s cubic-bezier(.22,1,.36,1)}
+.tg--js .tgw.on{opacity:1}
+@media (prefers-reduced-motion:reduce){.tg--js .tgw{opacity:1;transition:none}}
 .sec--tide{background:var(--tide)}
 
 /* buttons */
@@ -390,6 +395,12 @@ body{padding-bottom:0}
     </div>
   </section>
 
+  <section class="sec tgsec" aria-label="바다보길이 약속하는 것">
+    <div class="wrap">
+      <p class="tg" id="tg">키운 어가도,<br>건진 날도,<br>상자 안에 적어 보냅니다.</p>
+    </div>
+  </section>
+
   <section class="sec" id="how" aria-labelledby="h-how">
     <div class="wrap">
       <h2 class="h2 rv" id="h-how">주문은 네 걸음이면 끝납니다</h2>
@@ -450,7 +461,7 @@ body{padding-bottom:0}
             <tr><td><span class="pill">4~6미</span></td><td>회, 접대용</td></tr><tr><td><span class="pill">7~8미</span></td><td>회, 스테이크, 선물용</td></tr><tr><td><span class="pill">9~10미</span></td><td>회, 버터구이, 찜</td></tr><tr><td><span class="pill">11~12미</span></td><td>전복장</td></tr><tr><td><span class="pill">13~14미</span></td><td>죽, 물회</td></tr></tbody></table>
         </div>
       </div>
-      <ul class="ship rv"><li><b>가격</b> 시세대로, 주문하시면 문자로 알려 드립니다.</li><li><b>배송비</b> 3,000원. 4kg 이상 주문하면 무료입니다. 도서산간은 추가 배송비가 있습니다.</li><li><b>발송</b> 주문일 기준 1주일 이내.</li></ul>
+      <ul class="ship rv"><li><b>가격</b> 시세대로, 주문하시면 문자로 알려 드립니다.</li><li><b>배송비</b> 3,000원. 4kg 이상 주문하면 무료입니다. 도서산간은 추가 배송비가 있습니다.</li><li><b>발송</b> 주문일 기준 1주일 이내.</li><li><b>취소·교환</b> 발송 전에는 전액 취소됩니다. 상태에 문제가 있으면 받은 날을 포함해 7일 이내에 사진과 함께 알려 주세요. 교환이나 환불로 처리하고, 그때의 배송비는 바다보길이 부담합니다.</li></ul>
       <div class="offer__cta"><a class="btn btn--solid btn--wide" href="https://forms.gle/7pdXrsu2LfyX6bJw6" target="_blank" rel="noopener">전복 구매</a></div>
     </div>
   </section>
@@ -528,6 +539,15 @@ body{padding-bottom:0}
 var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;
 if(rm){v.removeAttribute('autoplay');v.pause();return}
 if('IntersectionObserver' in window){new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){})}else{v.pause()}})},{threshold:.35}).observe(v)}
+})();
+
+(function(){var t=document.getElementById('tg');if(!t||!('IntersectionObserver' in window))return;
+var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches;if(rm)return;
+function wrap(n){Array.prototype.slice.call(n.childNodes).forEach(function(c){
+ if(c.nodeType===3){var f=document.createDocumentFragment();c.textContent.split(/(\s+)/).forEach(function(w){if(!w)return;if(/^\s+$/.test(w)){f.appendChild(document.createTextNode(w))}else{var sp=document.createElement('span');sp.className='tgw';sp.textContent=w;f.appendChild(sp)}});n.replaceChild(f,c)}});}
+wrap(t);t.classList.add('tg--js');
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{rootMargin:'0px 0px -35% 0px'});
+var ws=t.querySelectorAll('.tgw');ws.forEach(function(w,i){w.style.transitionDelay=(i%4)*60+'ms';io.observe(w)});
 })();
 </script>
 </body>
