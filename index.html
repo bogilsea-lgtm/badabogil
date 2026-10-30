@@ -406,6 +406,18 @@ summary,a{touch-action:manipulation}
 .feat{margin-top:44px}
 .pay{margin-top:28px}
 .sec--white+.sec--white{padding-top:0}
+
+/* 데스크톱: 어가 카드를 오른쪽 열 아래로 옮겨 한 화면에 보이게 */
+.hcard--r,.hcard__cap--r{display:none}
+@media (min-width:900px){
+  .split__l .hcard,.split__l .hcard__cap{display:none}
+  .split .hcard--r{display:grid;grid-template-columns:repeat(3,1fr);column-gap:22px;width:100%;margin:40px 0 0;padding:20px 24px 0;transform:none;position:static}
+  .hcard--r .hcard__top,.hcard--r .hcard__band{grid-column:1/-1}
+  .hcard--r .hcard__top{margin-bottom:10px}
+  .hcard--r .hcard__band{margin:20px -24px 0}
+  .hcard__cap--r{display:block;margin-top:14px;text-align:left}
+  .story__ph{margin-top:36px}
+}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://badabogil.com/#org","name":"바다보길","url":"https://badabogil.com/","description":"전남 완도군 보길도 양식장에서 수확한 전복을 소비자에게 바로 보내는 산지직송 전복 판매","image":"https://badabogil.com/og.png","telephone":"+82-10-5100-0830","email":"bogilsea@bogilsea.com","areaServed":"KR","knowsAbout":["전복","활전복","손질전복","보길도","완도 전복 산지직송"],"identifier":{"@type":"PropertyValue","name":"통신판매업 신고번호","value":"2026-전남완도-063"},"address":{"@type":"PostalAddress","streetAddress":"보길면 부황길 31","addressLocality":"완도군","addressRegion":"전남광주통합특별시","addressCountry":"KR"}},{"@type":"WebSite","@id":"https://badabogil.com/#site","url":"https://badabogil.com/","name":"바다보길","inLanguage":"ko-KR","publisher":{"@id":"https://badabogil.com/#org"}},{"@type":"WebPage","@id":"https://badabogil.com/#page","url":"https://badabogil.com/","name":"보길도 전복 산지직송 | 바다보길","description":"물살 센 완도 보길도에서 천천히 자란 단단한 전복. 손질전복·활전복을 양식장에서 바로 보냅니다. 주문일 기준 1주일 이내 발송, 주문 방법 안내.","inLanguage":"ko-KR","isPartOf":{"@id":"https://badabogil.com/#site"},"about":{"@id":"https://badabogil.com/#org"},"primaryImageOfPage":"https://badabogil.com/og.png"},{"@type":"HowTo","name":"전복 주문 방법","step":[{"@type":"HowToStep","position":1,"name":"주문서 쓰기","text":"주문서에 크기, 수량, 받는 곳을 적습니다."},{"@type":"HowToStep","position":2,"name":"금액 문자 받기","text":"시세와 배송비를 더한 금액을 문자로 안내받습니다."},{"@type":"HowToStep","position":3,"name":"1일 안에 입금","text":"계좌이체 또는 결제 링크(카드·간편결제)로 1일 안에 결제합니다."},{"@type":"HowToStep","position":4,"name":"어가에서 발송","text":"주문일 기준 1주일 이내에 발송하며, 결항 시에는 지연될 수 있어 미리 연락드립니다. 기본 배송비는 3,000원이며 4kg 이상 주문 시 무료배송입니다."}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"어디에서 키운 전복인가요?","acceptedAnswer":{"@type":"Answer","text":"전남 완도군 보길도 바다 양식장에서 어가가 키운 전복입니다. 상자에 키운 어가와 건진 날을 적은 이력카드를 함께 넣어 보냅니다."}},{"@type":"Question","name":"손질전복은 어떻게 손질해서 오나요?","acceptedAnswer":{"@type":"Answer","text":"껍질과 내장까지 손질해서 보내 드립니다. 손질 없이 바로 조리하실 수 있어요. 통째로 받고 싶으시면 주문서에서 활전복 크기를 고르세요."}},{"@type":"Question","name":"시장이나 마트 전복과 뭐가 다른가요?","acceptedAnswer":{"@type":"Answer","text":"물살이 센 보길도 바다에서 천천히 자라 육질이 단단합니다. 또 수족관에서 오래 머문 전복은 먹이를 먹지 못해 살이 빠지기 쉬운데, 바다보길은 양식장에서 수확해 바로 포장·발송합니다."}},{"@type":"Question","name":"전복 크기는 요리별로 어떻게 고르나요?","acceptedAnswer":{"@type":"Answer","text":"활전복은 회·접대용은 4~6미(자이언트), 회·스테이크·선물용은 7~8미(특대), 회·버터구이·찜은 9~10미(대), 전복장은 11~12미(중), 죽·물회는 13~14미(소)가 어울립니다. 미는 1kg에 들어가는 마릿수라서 숫자가 작을수록 큰 전복입니다."}},{"@type":"Question","name":"크기를 못 고르겠어요.","acceptedAnswer":{"@type":"Answer","text":"주문서의 크기에서 '잘 모르겠어요'를 고르고, 몇 분이 드실지와 해 드실 요리를 적어 주세요. 맞춰 담아 드립니다."}},{"@type":"Question","name":"가격은 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"전복 값은 시세에 따라 달라서, 주문서를 보내 주시면 금액을 문자로 안내해 드립니다. 금액을 확인하신 뒤에 입금하시면 됩니다."}},{"@type":"Question","name":"어떻게 결제하나요?","acceptedAnswer":{"@type":"Answer","text":"계좌이체로 받습니다. 금액 안내 문자에 결제 링크를 함께 보내 드리면 카드나 간편결제로도 결제하실 수 있습니다."}},{"@type":"Question","name":"입금은 언제까지 해야 하나요?","acceptedAnswer":{"@type":"Answer","text":"금액 안내 문자를 받은 날로부터 1일 안에 입금해 주세요. 입금이 없으면 주문은 자동으로 취소됩니다. 금액은 안내 문자로 확정되니, 문자를 받으신 뒤에 입금해 주세요."}},{"@type":"Question","name":"언제 받을 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"주문일 기준 1주일 이내에 발송합니다. 결항 등으로 배가 뜨지 못하면 지연될 수 있으며, 이 경우 미리 연락드립니다."}},{"@type":"Question","name":"배송비는 얼마인가요?","acceptedAnswer":{"@type":"Answer","text":"기본 배송비는 3,000원입니다. 4kg 이상 주문하시면 무료배송이고, 도서산간 지역은 추가 배송비가 발생합니다. 배송비는 금액 안내 문자에 함께 적어 드립니다."}},{"@type":"Question","name":"선물로 보낼 수 있나요?","acceptedAnswer":{"@type":"Answer","text":"주문서에 받는 분 이름과 주소를 따로 적으시면 그분께 바로 보냅니다."}},{"@type":"Question","name":"받았는데 상태가 이상해요.","acceptedAnswer":{"@type":"Answer","text":"받으시면 바로 상태를 확인해 주시고, 문제가 있으면 사진과 함께 하단 사업자 정보의 연락처로 알려 주세요. 확인한 뒤 교환이나 환불로 처리해 드립니다. 신선식품이라 단순 변심으로는 반품이 어렵습니다."}}]}]}</script>
 </head>
@@ -517,6 +529,14 @@ summary,a{touch-action:manipulation}
           <h3>값보다 먼저, 바르게 기른 믿음</h3>
           <p>키운 어가와 건진 날을 이력카드에 적어 보내요. 믿을 수 있는 전복을 제때 받아 드세요.</p>
         </div>
+        <div class="hcard hcard--r" role="img" aria-label="이력카드 예시: 키운 어가, 건진 날, 크기를 적는 칸이 있는 카드">
+          <div class="hcard__top"><span class="hcard__brand">바다보길</span><span class="hcard__kind">이력카드</span></div>
+          <div class="hcard__row"><span>키운 어가</span></div>
+          <div class="hcard__row"><span>건진 날</span></div>
+          <div class="hcard__row"><span>크기</span></div>
+          <div class="hcard__band">깡깡한 전복, 바다보길 전복</div>
+        </div>
+        <p class="hcard__cap hcard__cap--r">상자마다 이런 카드가 들어갑니다.</p>
       </div>
     </div>
   </section>
