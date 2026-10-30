@@ -64,25 +64,30 @@ ul,ol{padding:0;list-style:none}
 .top__link{font-weight:700;font-size:.9375rem;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
 
 /* hero */
-.hero{position:relative;padding-top:92px;overflow:hidden}
-.hero__grid{display:grid;gap:36px}
-.hero__title{font:700 clamp(2.125rem,8.4vw,3.25rem)/1.25 var(--f-serif);letter-spacing:-.03em}
+.hero{position:relative;padding-top:72px;overflow:hidden}
+.hero__grid{display:grid;gap:28px}
+.hero__title{font:700 clamp(2.75rem,13vw,4.25rem)/1.15 var(--f-serif);letter-spacing:-.04em}
 .hero__title span{display:block;white-space:nowrap}
-@media (max-width:380px){.hero__title{font-size:1.875rem}.hero__title span{white-space:normal}}.hero__title em{font-style:normal;color:var(--sea)}
-.hero__lead{margin-top:22px;max-width:30em;font-size:clamp(1.0625rem,3.6vw,1.25rem);line-height:1.7}
-.hero__cta{margin-top:30px;display:flex;flex-direction:column;gap:12px;max-width:420px}
+@media (max-width:340px){.hero__title{font-size:2.5rem}}.hero__title em{font-style:normal;color:var(--sea)}
+.hero__lead{margin-top:20px;max-width:30em;font-size:clamp(1.0625rem,3.8vw,1.3125rem);line-height:1.65}
+.hero__lead b{font-weight:700}
+.hero__gloss{margin-top:8px;font-size:.9375rem;color:var(--mute)}
+.hero__cta{margin-top:26px;display:flex;flex-direction:column;gap:14px;max-width:420px}
+.hero__cta .btn{min-height:60px;font-size:1.25rem}
+.hero__facts{display:flex;flex-wrap:wrap;gap:8px}
+.hero__facts li{padding:6px 14px;border-radius:999px;background:var(--surf);font-size:.9375rem;font-weight:500;color:var(--deep)}
 .hero__note{font-size:.9375rem;color:var(--mute);line-height:1.6}
 .hero__note b{color:var(--deep);font-weight:700}
 .inapp{margin-top:14px;padding:14px 16px;border-radius:var(--r);background:var(--surf);font-size:.9375rem;line-height:1.55;max-width:420px}
 .inapp button{margin-top:8px;display:block;min-height:44px;padding:0 18px;border-radius:999px;border:2px solid var(--teal);background:transparent;color:var(--teal);font:700 .9375rem/1 var(--f-body);cursor:pointer}
-.hero__vis{position:relative}
-.hero__ph{aspect-ratio:4/4.3;overflow:hidden;border-radius:var(--r)}
+.hero__vis{position:relative;order:-1;margin-bottom:52px}
+.hero__ph{aspect-ratio:4/3.3;overflow:hidden;border-radius:var(--r)}
 .hero__ph img{width:100%;height:100%;object-fit:cover}
-.tag{position:absolute;left:12px;bottom:-22px;width:min(78%,300px);background:#fff;border:1px solid var(--rule);border-radius:var(--r);padding:16px 18px 14px;transform:rotate(-2.2deg)}
+.tag{position:absolute;left:12px;bottom:-46px;width:min(66%,250px);background:#fff;border:1px solid var(--rule);border-radius:var(--r);padding:16px 18px 14px;transform:rotate(-2.2deg)}
 .tag::before{content:"";position:absolute;top:-9px;left:50%;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:#fff;border:1px solid var(--rule)}
 .tag__h{display:flex;justify-content:space-between;align-items:baseline;font:700 .9375rem/1 var(--f-serif);padding-bottom:10px;border-bottom:1px solid var(--rule)}
 .tag__h span{font:500 .75rem/1 var(--f-body);color:var(--mute)}
-.tag__r{display:flex;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px dashed var(--rule);font-size:.875rem;color:var(--mute)}
+.tag__r{display:flex;gap:12px;align-items:baseline;padding:6px 0;border-bottom:1px dashed var(--rule);font-size:.875rem;color:var(--mute)}
 .tag__r b{min-width:4.2em;font-weight:500;color:var(--deep)}
 .tag__r i{flex:1;height:1px;align-self:end;margin-bottom:6px;background:repeating-linear-gradient(90deg,var(--rule) 0 4px,transparent 4px 8px)}
 .tag__cap{padding-top:9px;font-size:.75rem;color:var(--mute)}
@@ -230,7 +235,8 @@ body{padding-bottom:0}
   :root{--gut:32px}
   .hero{padding-top:116px}
   .hero__grid{grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
-  .hero__vis{margin-inline:0}
+  .hero__vis{margin-inline:0;order:0;margin-bottom:0}
+  .tag__r{padding:9px 0}
   .hero__ph{aspect-ratio:4/5}
   .tag{left:-34px;bottom:34px;width:300px}
   .split{grid-template-columns:1fr 1fr;gap:64px}
@@ -258,11 +264,12 @@ body{padding-bottom:0}
   </div></div>
   <div class="wrap hero__grid">
     <div>
-      <h1 class="hero__title"><span>어디서, 어떻게 자란</span> <span>전복인지 <em>알고 드세요.</em></span></h1>
-      <p class="hero__lead">보길도 어가에서 직접 기른 전복을 보내 드립니다. 상자 안 이력카드에 키운 어가와 건진 날을 적어서요.</p>
+      <h1 class="hero__title"><span>깡깡한 전복,</span> <span><em>바다보길</em></span></h1>
+      <p class="hero__lead"><b>보길도 어가에서 직접 기른 전복.</b><br>키운 어가와 건진 날을 상자 안 이력카드에 적어 보냅니다.</p>
+      <p class="hero__gloss">깡깡하다는 사투리로 단단하다는 말이에요.</p>
       <div class="hero__cta">
         <a class="btn btn--solid" href="https://forms.gle/7pdXrsu2LfyX6bJw6" target="_blank" rel="noopener">전복 구매</a>
-        <p class="hero__note"><b>주문서 작성 → 금액 문자 → 입금 확인 후 발송.</b><br>금액은 시세대로 문자로 먼저 알려 드려요. 확인하고 결정하세요.</p>
+        <ul class="hero__facts"><li>활전복 · 손질전복</li><li>금액은 문자로 먼저</li><li>주문일 기준 1주일 이내 발송</li></ul>
         <div class="inapp" id="inapp" hidden>인스타그램이나 카카오톡 안에서 주문서가 열리지 않으면, 주소를 복사해 크롬이나 사파리에서 열어 주세요.<button type="button" id="copyForm">주문서 주소 복사</button><span class="sr" id="copyFormOk" role="status" aria-live="polite"></span></div>
       </div>
     </div>
