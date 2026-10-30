@@ -117,7 +117,7 @@ ul,ol{padding:0;list-style:none}
 .foot__brand span{font:400 1.5rem/1.2 var(--f-display);color:var(--deep)}
 .foot__links{display:flex;flex-wrap:wrap;align-items:center;gap:0 12px;padding-bottom:14px;margin-bottom:14px;border-bottom:1px solid rgba(18,51,58,.25);color:var(--deep)}
 .foot__links a{display:inline-flex;align-items:center;min-height:44px;font-weight:700;font-size:.9062rem;color:var(--deep)}
-.foot__info{display:flex;flex-wrap:wrap;gap:0 14px}
+.foot__info{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 14px}
 .foot__info span{white-space:nowrap}
 .foot__info span.wide{white-space:normal}
 .foot__info b{font-weight:500}
