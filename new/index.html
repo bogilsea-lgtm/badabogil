@@ -45,7 +45,7 @@ ul,ol{padding:0;list-style:none}
 .lead{margin-top:16px;max-width:36em;color:var(--mute);font-size:1.0625rem}
 .sec{padding-block:clamp(56px,9vw,104px);background:var(--mist)}
 .sec--white{background:#fff}
-.vid{border-radius:var(--r);overflow:hidden;background:var(--surf);max-width:960px}.vid video{display:block;width:100%;height:auto;aspect-ratio:16/9}
+.vid{border-radius:var(--r);overflow:hidden;background:var(--surf)}.vid video{display:block;width:100%;height:auto;aspect-ratio:16/9}
 .sec--tide{background:var(--tide)}
 
 /* buttons */
@@ -343,9 +343,8 @@ body{padding-bottom:0}
 
 <main id="main">
 
-  <section class="sec sec--white" aria-labelledby="h-video" style="padding-block:clamp(32px,6vw,64px)">
+  <section class="sec" aria-label="바다보길 소개 영상" style="padding-block:clamp(8px,2vw,24px) clamp(40px,6vw,72px)">
     <div class="wrap">
-      <h2 class="h2 rv" id="h-video" style="margin-bottom:20px">10초로 보는 바다보길</h2>
       <div class="vid rv"><video id="introv" controls muted loop playsinline autoplay preload="auto" poster="/new/video/intro-poster.jpg" width="1280" height="720"><source src="/new/video/intro.mp4" type="video/mp4">영상을 재생할 수 없는 브라우저입니다.</video></div>
     </div>
   </section>
