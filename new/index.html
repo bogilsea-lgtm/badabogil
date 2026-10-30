@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>어디서 자랐는지 아는 전복 | 바다보길</title>
+<meta name="description" content="보길도 어가에서 직접 기른 전복. 상자마다 키운 어가와 건진 날을 적은 이력카드를 넣어 보냅니다. 시세 금액을 문자로 먼저 알려드리고, 주문일 기준 1주일 이내 발송합니다.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#F6F1E6">
+<meta name="color-scheme" content="light">
+<link rel="canonical" href="https://badabogil.com/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="바다보길">
+<meta property="og:title" content="어디서 자랐는지 아는 전복, 바다보길">
+<meta property="og:description" content="보길도 어가에서 직접 기른 전복. 키운 어가와 건진 날을 상자에 적어 보냅니다.">
+<meta property="og:image" content="https://badabogil.com/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mist:#F6F1E6; --white:#fff; --tide:#E4ECE8;
+  --deep:#0E3B42; --mute:#456169; --teal:#0E4A52; --teal-dark:#0A3A41; --sea:#2E7C8A;
+  --rule:rgba(14,59,66,.16);
+  --f-serif:'Noto Serif KR','Noto Serif CJK KR','Batang',serif;
+  --f-body:'Noto Sans KR','Noto Sans CJK KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  --gut:20px; --max:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--mist);color:var(--deep);font:400 1.0625rem/1.75 var(--f-body);word-break:keep-all;overflow-wrap:break-word}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,p,ol,ul,dl,dd,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gut)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--deep);outline-offset:3px}
+.skip{position:absolute;left:-999px;top:8px;z-index:50;background:#fff;padding:12px 16px;border-radius:12px;font-weight:700}
+.skip:focus{left:12px}
+
+/* type */
+.h2{text-wrap:balance;font:700 clamp(1.625rem,5.2vw,2.5rem)/1.35 var(--f-serif);letter-spacing:-.01em;max-width:22em}
+.lead{margin-top:16px;max-width:36em;color:var(--mute);font-size:1.0625rem}
+.sec{padding-block:clamp(56px,9vw,104px)}
+.sec--white{background:#fff}
+.sec--tide{background:var(--tide)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:58px;padding:0 34px;border-radius:999px;border:2px solid transparent;font:700 1.1875rem/1.2 var(--f-body);text-decoration:none;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background .2s,transform .12s,box-shadow .2s}
+.btn:active{transform:scale(.97)}
+.btn--solid{background:var(--teal);color:#fff;box-shadow:0 8px 22px -10px rgba(14,74,82,.7)}
+.btn--white{background:#fff;color:var(--teal)}
+.btn--ghost{background:transparent;border-color:var(--teal);color:var(--teal);min-height:48px;font-size:1rem;padding:0 22px}
+@media (hover:hover) and (pointer:fine){.btn--solid:hover{background:var(--teal-dark)}.btn--white:hover{background:var(--tide)}}
+.btn--wide{width:100%}
+
+/* top */
+.top{position:absolute;inset:0 0 auto;z-index:5;padding-block:18px}
+.top .wrap{display:flex;align-items:center;justify-content:space-between}
+.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font:700 1.25rem/1 var(--f-serif)}
+.brand img{width:30px;height:30px}
+.top__link{font-weight:700;font-size:.9375rem;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
+
+/* hero */
+.hero{position:relative;padding-top:92px;overflow:hidden}
+.hero__grid{display:grid;gap:36px}
+.hero__title{font:700 clamp(2.125rem,8.4vw,3.25rem)/1.25 var(--f-serif);letter-spacing:-.02em}
+.hero__title span{display:block;white-space:nowrap}.hero__title em{font-style:normal;color:var(--sea)}
+.hero__lead{margin-top:22px;max-width:30em;font-size:clamp(1.0625rem,3.6vw,1.25rem);line-height:1.7}
+.hero__cta{margin-top:30px;display:flex;flex-direction:column;gap:12px;max-width:420px}
+.hero__note{font-size:.9375rem;color:var(--mute);line-height:1.6}
+.hero__note b{color:var(--deep);font-weight:700}
+.inapp{margin-top:14px;padding:14px 16px;border-radius:16px;background:#fff;font-size:.9375rem;line-height:1.55;max-width:420px}
+.inapp button{margin-top:8px;display:block;min-height:44px;padding:0 18px;border-radius:999px;border:2px solid var(--teal);background:transparent;color:var(--teal);font:700 .9375rem/1 var(--f-body);cursor:pointer}
+.hero__vis{position:relative;margin-inline:calc(var(--gut)*-1)}
+.hero__ph{aspect-ratio:4/4.3;overflow:hidden}
+.hero__ph img{width:100%;height:100%;object-fit:cover}
+.tag{position:absolute;left:var(--gut);bottom:-22px;width:min(78%,300px);background:#FFFDF7;border:1px solid var(--rule);border-radius:6px;padding:16px 18px 14px;box-shadow:0 18px 30px -18px rgba(14,59,66,.55);transform:rotate(-2.2deg)}
+.tag::before{content:"";position:absolute;top:-9px;left:50%;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:var(--mist);border:1px solid var(--rule)}
+.tag__h{display:flex;justify-content:space-between;align-items:baseline;font:700 .9375rem/1 var(--f-serif);padding-bottom:10px;border-bottom:1px solid var(--rule)}
+.tag__h span{font:500 .75rem/1 var(--f-body);color:var(--mute)}
+.tag__r{display:flex;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px dashed var(--rule);font-size:.875rem;color:var(--mute)}
+.tag__r b{min-width:4.2em;font-weight:500;color:var(--deep)}
+.tag__r i{flex:1;height:1px;align-self:end;margin-bottom:6px;background:repeating-linear-gradient(90deg,var(--rule) 0 4px,transparent 4px 8px)}
+.tag__cap{padding-top:9px;font-size:.75rem;color:var(--mute)}
+.wave{position:relative;height:46px;margin-top:44px;overflow:hidden;color:var(--tide)}
+.wave svg{position:absolute;left:0;bottom:0;width:200%;height:100%;animation:drift 22s linear infinite}
+@keyframes drift{to{transform:translateX(-50%)}}
+
+/* problem */
+.pains{margin-top:36px;display:grid;gap:0;border-top:1px solid var(--rule)}
+.pain{padding:24px 0;border-bottom:1px solid var(--rule)}
+.pain h3{font:700 1.25rem/1.45 var(--f-serif)}
+.pain p{margin-top:8px;color:var(--mute)}
+.split{display:grid;gap:36px;align-items:center}
+.ph{overflow:hidden;border-radius:22px}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph--wide{aspect-ratio:16/11}
+
+/* solution */
+.sol{margin-top:34px;display:grid;gap:22px}
+.sol li{display:grid;grid-template-columns:44px 1fr;gap:14px}
+.sol__ic{width:44px;height:44px;border-radius:50%;background:var(--tide);display:grid;place-items:center}
+.sol__ic svg{width:24px;height:24px;stroke:var(--teal);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sol h3{font:700 1.1875rem/1.45 var(--f-serif)}
+.sol p{margin-top:4px;color:var(--mute)}
+
+/* benefits */
+.ben{margin-top:36px;display:grid;gap:0}
+.ben li{padding:22px 0;border-top:1px solid var(--rule)}
+.ben li:last-child{border-bottom:1px solid var(--rule)}
+.ben h3{font:700 1.1875rem/1.45 var(--f-serif)}
+.ben p{margin-top:6px;color:var(--mute)}
+
+/* steps */
+.steps{margin-top:36px;display:grid;gap:0;position:relative}
+.steps li{position:relative;display:grid;grid-template-columns:48px 1fr;gap:16px;padding-bottom:28px}
+.steps li:last-child{padding-bottom:0}
+.steps li::before{content:"";position:absolute;left:23px;top:48px;bottom:0;width:2px;background:var(--rule)}
+.steps li:last-child::before{display:none}
+.steps__n{width:48px;height:48px;border-radius:50%;background:var(--teal);color:#fff;display:grid;place-items:center;font:700 1.125rem/1 var(--f-serif)}
+.steps h3{font:700 1.1875rem/1.4 var(--f-serif);padding-top:10px}
+.steps p{margin-top:4px;color:var(--mute)}
+.chips{margin-top:8px;display:flex;flex-wrap:wrap;gap:6px}
+.chips li{display:block;padding:4px 12px;border-radius:999px;background:#fff;border:1px solid var(--rule);font-size:.875rem;color:var(--deep);padding-bottom:4px}
+.pay{margin-top:34px;padding:22px 22px 20px;border-radius:22px;background:#fff;max-width:440px}
+.pay__h{font-size:.875rem;color:var(--mute)}
+.pay__no{font:700 1.5rem/1.3 var(--f-serif);margin-top:2px;letter-spacing:.01em}
+.pay__who{color:var(--mute);font-size:.9375rem}
+.pay__row{margin-top:12px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.pay__ok{font-size:.875rem;color:var(--sea)}
+.pay__warn{margin-top:10px;font-size:.875rem;color:var(--mute)}
+
+/* evidence */
+.proof{margin-top:34px;display:grid;gap:14px}
+.proof li{background:var(--mist);border-radius:18px;padding:20px 22px}
+.proof h3{font:700 1.125rem/1.45 var(--f-serif)}
+.proof p{margin-top:4px;color:var(--mute);font-size:1rem}
+.proof a{font-weight:700;color:var(--teal)}
+.proof__no{display:inline-block;margin-top:6px;font:700 1.0625rem/1 var(--f-serif);letter-spacing:.02em}
+.honest{margin-top:26px;max-width:34em;padding-left:18px;border-left:3px solid var(--sea);color:var(--deep);font-size:1.0625rem}
+.strip{margin-top:34px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.strip .ph{border-radius:16px;aspect-ratio:4/3}
+
+/* offer */
+.offer{margin-top:34px;display:grid;gap:14px}
+.offer__c{background:#fff;border-radius:22px;padding:24px 22px}
+.offer__c h3{font:700 1.25rem/1.4 var(--f-serif)}
+.offer__c p{margin-top:6px;color:var(--mute)}
+.offer__c .k{margin-top:10px;display:inline-block;padding:4px 12px;border-radius:999px;background:var(--tide);font-size:.875rem;font-weight:500}
+.sizes{margin-top:12px;width:100%;border-collapse:collapse;font-size:.9375rem}
+.sizes th,.sizes td{text-align:left;padding:9px 0;border-bottom:1px solid var(--rule)}
+.sizes th{font-weight:500;color:var(--mute);font-size:.875rem}
+.sizes td:first-child{font-weight:700;white-space:nowrap;padding-right:12px}
+.ship{margin-top:22px;padding:20px 22px;border-radius:18px;background:var(--tide)}
+.ship li{padding:4px 0}
+.ship b{font-weight:700}
+.offer__cta{margin-top:30px;max-width:420px}
+
+/* faq */
+.faq{margin-top:30px;max-width:46em}
+.faq details{border-top:1px solid var(--rule)}
+.faq details:last-child{border-bottom:1px solid var(--rule)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:60px;padding:14px 0;font:700 1.0625rem/1.5 var(--f-body)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:12px;height:12px;border-right:2px solid var(--teal);border-bottom:2px solid var(--teal);transform:rotate(45deg) translateY(-3px);transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(-135deg)}
+.faq__a{padding:0 0 18px;color:var(--mute);max-width:40em}
+
+/* close */
+.close{background:var(--teal);color:#fff;padding-block:clamp(64px,10vw,112px)}
+.close .h2{color:#fff;max-width:18em}
+.close p{margin-top:14px;max-width:30em;color:rgba(255,255,255,.86)}
+.close .btn{margin-top:28px}
+.close__note{margin-top:14px;font-size:.9375rem}
+.close :focus-visible{outline-color:#fff}
+
+/* footer (same content as main site) */
+.foot{background:var(--tide);padding-block:30px 36px;font-size:.8438rem;line-height:1.8;color:var(--mute)}
+.foot__brand{display:flex;align-items:center;gap:10px;margin-bottom:6px;font:700 1.375rem/1.2 var(--f-serif);color:var(--deep)}
+.foot__brand img{width:30px;height:30px}
+.foot__links{display:flex;flex-wrap:wrap;align-items:center;gap:0 20px;padding-bottom:14px;margin-bottom:14px;border-bottom:1px solid rgba(18,51,58,.25);color:var(--deep)}
+.foot__links a{display:inline-flex;align-items:center;min-height:44px;font-weight:700;font-size:.9062rem;color:var(--deep)}
+.foot__info{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 14px}
+.foot__info span{white-space:nowrap}
+.foot__info .brk{flex-basis:100%;height:0}
+.foot__info b{font-weight:500}
+.foot__info a{display:inline-block;padding:8px 0;color:var(--deep);text-decoration:underline}
+.foot__copy{margin-top:10px;font-size:.7812rem}
+@media (max-width:640px){.foot__info span{white-space:normal}}
+
+/* sticky bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px var(--gut) calc(10px + env(safe-area-inset-bottom));background:rgba(246,241,230,.94);backdrop-filter:blur(8px);border-top:1px solid var(--rule);transform:translateY(110%);transition:transform .3s}
+.bar.is-on{transform:none}
+.bar .btn{width:100%}
+body{padding-bottom:0}
+
+/* motion */
+@media (prefers-reduced-motion:no-preference){
+  .hero__title,.hero__lead,.hero__cta{opacity:0;transform:translateY(12px);animation:up .8s cubic-bezier(.2,.7,.2,1) forwards}
+  .hero__lead{animation-delay:.12s}.hero__cta{animation-delay:.24s}
+  .tag{animation:drop 1s .5s cubic-bezier(.2,.8,.2,1.1) both}
+  @keyframes up{to{opacity:1;transform:none}}
+  @keyframes drop{from{opacity:0;transform:translateY(-26px) rotate(-6deg)}to{opacity:1;transform:rotate(-2.2deg)}}
+  .rv{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+  .rv.in{opacity:1;transform:none}
+  .steps li::before{transform-origin:top;transform:scaleY(0);transition:transform .8s .3s ease}
+  .steps li.in::before{transform:scaleY(1)}
+}
+@media (prefers-reduced-motion:reduce){.wave svg{animation:none}}
+
+/* wide */
+@media (min-width:900px){
+  :root{--gut:32px}
+  .hero{padding-top:116px}
+  .hero__grid{grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+  .hero__vis{margin-inline:0}
+  .hero__ph{border-radius:28px;aspect-ratio:4/5}
+  .tag{left:-34px;bottom:34px;width:300px}
+  .split{grid-template-columns:1fr 1fr;gap:64px}
+  .split--rev .ph{order:2}
+  .ben{grid-template-columns:1fr 1fr;column-gap:56px}
+  .ben li:nth-last-child(2){border-bottom:1px solid var(--rule)}
+  .proof{grid-template-columns:1fr 1fr}
+  .strip{grid-template-columns:repeat(3,1fr)}
+  .offer{grid-template-columns:1fr 1fr}
+  .bar{display:none}
+  .hero__cta .btn{width:auto;align-self:flex-start}
+}
+</style>
+<noscript><style>.rv,.hero__title,.hero__lead,.hero__cta{opacity:1!important;transform:none!important;animation:none!important}</style></noscript>
+</head>
+<body>
+<a class="skip" href="#main">본문 바로가기</a>
+
+<header class="hero" data-hide-bar>
+  <div class="top"><div class="wrap">
+    <a class="brand" href="/" aria-label="바다보길 처음으로"><img src="/favicon.svg" width="30" height="30" alt="">바다보길</a>
+    <a class="top__link" href="#how">주문 방법</a>
+  </div></div>
+  <div class="wrap hero__grid">
+    <div>
+      <h1 class="hero__title"><span>어디서, 어떻게 자란</span> <span>전복인지 <em>알고 드세요.</em></span></h1>
+      <p class="hero__lead">보길도 어가에서 직접 기른 전복을 보내 드립니다. 상자 안 이력카드에 키운 어가와 건진 날을 적어서요.</p>
+      <div class="hero__cta">
+        <a class="btn btn--solid" href="https://forms.gle/7pdXrsu2LfyX6bJw6" target="_blank" rel="noopener">전복 구매</a>
+        <p class="hero__note"><b>주문서 작성 → 금액 문자 → 입금 확인 후 발송.</b><br>금액은 시세대로 문자로 먼저 알려 드려요. 확인하고 결정하세요.</p>
+        <div class="inapp" id="inapp" hidden>인스타그램이나 카카오톡 안에서 주문서가 열리지 않으면, 주소를 복사해 크롬이나 사파리에서 열어 주세요.<button type="button" id="copyForm">주문서 주소 복사</button><span class="sr" id="copyFormOk" role="status" aria-live="polite"></span></div>
+      </div>
+    </div>
+    <div class="hero__vis">
+      <div class="hero__ph"><img src="/img/abalone-tray.jpg" width="800" height="1000" fetchpriority="high" alt="양식장에서 건져 쟁반에 담은 활전복"></div>
+      <div class="tag" role="img" aria-label="이력카드 예시. 키운 어가, 건진 날, 크기를 적는 칸이 있습니다.">
+        <div class="tag__h">이력카드<span>바다보길</span></div>
+        <div class="tag__r"><b>키운 어가</b><i></i></div>
+        <div class="tag__r"><b>건진 날</b><i></i></div>
+        <div class="tag__r"><b>크기</b><i></i></div>
+        <p class="tag__cap">상자마다 이 카드가 들어갑니다.</p>
+      </div>
+    </div>
+  </div>
+  <div class="wave" aria-hidden="true"><svg viewBox="0 0 2400 46" preserveAspectRatio="none"><path fill="currentColor" d="M0 24c100 0 100-14 200-14s100 14 200 14 100-14 200-14 100 14 200 14 100-14 200-14 100 14 200 14 100-14 200-14 100 14 200 14 100-14 200-14 100 14 200 14 100-14 200-14 100 14 200 14V46H0z"/></svg></div>
+</header>
+
+<main id="main">
+
+  <section class="sec sec--tide" aria-labelledby="h-problem" style="padding-top:clamp(24px,4vw,40px)">
+    <div class="wrap split split--rev">
+      <div class="ph ph--wide rv"><img src="/img/farm-rows.jpg" width="1600" height="900" loading="lazy" alt="보길도 바다 위 전복 양식장에서 일하는 사람들"></div>
+      <div>
+        <h2 class="h2 rv" id="h-problem">전복은 비싼데, 어디서 어떻게 컸는지는 알 수가 없습니다.</h2>
+        <ul class="pains">
+          <li class="pain rv"><h3>포장에는 ‘완도산’ 한 줄뿐입니다.</h3><p>어느 바다, 어느 어가에서 컸는지는 어디에도 쓰여 있지 않아요.</p></li>
+          <li class="pain rv"><h3>언제 건져 올린 건지 모릅니다.</h3><p>수확한 날과 포장한 날은 다를 수 있는데, 받는 사람은 구분할 방법이 없어요.</p></li>
+          <li class="pain rv"><h3>손질이 막막해서 망설여집니다.</h3><p>껍데기째 오면 손질이 큰일이고, 어떤 크기를 사야 할지도 모르겠고요.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-solution">
+    <div class="wrap split">
+      <div>
+        <h2 class="h2 rv" id="h-solution">보길도 어가에서 직접 기른 전복</h2>
+        <p class="lead rv">보길도는 완도군에 속한 섬이고, 다도해해상국립공원 권역에 있습니다. 그 바다의 어가에서 키운 전복을, 어가에서 바로 보냅니다.</p>
+        <ul class="sol">
+          <li class="rv"><span class="sol__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6-5.2-6-10a6 6 0 0 1 12 0c0 4.800-6 10-6 10z"/><circle cx="12" cy="11" r="2"/></svg></span><div><h3>키운 곳을 적습니다</h3><p>이력카드에 키운 어가를 적어 상자에 넣어요. 누가 키웠는지 보고 드실 수 있습니다.</p></div></li>
+          <li class="rv"><span class="sol__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></span><div><h3>건진 날을 적습니다</h3><p>언제 건져 올린 전복인지 날짜로 확인할 수 있게 합니다.</p></div></li>
+          <li class="rv"><span class="sol__ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 18c3-6 6-9 8-9s5 3 8 9"/><path d="M8 18c1-3 2.500-4.500 4-4.500s3 1.500 4 4.500"/></svg></span><div><h3>드실 만큼, 드실 모양으로</h3><p>바로 조리하는 손질전복, 크기를 고르는 활전복 중에 고르세요.</p></div></li>
+        </ul>
+      </div>
+      <div class="ph ph--wide rv"><img src="/img/harvest.jpg" width="1600" height="900" loading="lazy" alt="보길도 양식장에서 전복을 수확하는 모습"></div>
+    </div>
+  </section>
+
+  <section class="sec sec--white" aria-labelledby="h-benefit">
+    <div class="wrap">
+      <h2 class="h2 rv" id="h-benefit">받아 보시면 달라지는 것</h2>
+      <ul class="ben">
+        <li class="rv"><h3>누구에게 물어볼지 압니다</h3><p>어가 이름이 상자에 있으니, 문제가 생겨도 어디서 온 전복인지 분명해요.</p></li>
+        <li class="rv"><h3>요리에 맞는 크기를 고릅니다</h3><p>회와 버터구이는 9~10미, 죽은 13~14미. 크기별로 어울리는 요리를 알려 드려요.</p></li>
+        <li class="rv"><h3>손질전복은 바로 조리합니다</h3><p>껍질과 내장까지 손질해서 보내요. 받자마자 굽고, 끓이고, 볶으면 됩니다.</p></li>
+        <li class="rv"><h3>금액을 보고 결정합니다</h3><p>시세 금액을 문자로 먼저 알려 드려요. 입금하기 전에는 아무 비용도 없습니다.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec" id="how" aria-labelledby="h-how">
+    <div class="wrap">
+      <h2 class="h2 rv" id="h-how">주문은 네 걸음이면 끝납니다</h2>
+      <ol class="steps">
+        <li class="rv"><span class="steps__n" aria-hidden="true">1</span><div><h3>주문서 쓰기</h3><p>크기, 수량, 받는 곳을 적어 주세요. 크기를 모르시면 ‘잘 모르겠어요’를 고르시면 됩니다.</p></div></li>
+        <li class="rv"><span class="steps__n" aria-hidden="true">2</span><div><h3>금액 문자 받기</h3><p>그날 시세로 전복 값과 배송비를 더해 문자로 알려 드려요.</p></div></li>
+        <li class="rv"><span class="steps__n" aria-hidden="true">3</span><div><h3>1일 안에 입금</h3><p>금액을 확인하셨으면 1일 안에 입금해 주세요. 기한이 지나면 주문은 자동으로 취소됩니다.</p></div></li>
+        <li class="rv"><span class="steps__n" aria-hidden="true">4</span><div><h3>어가에서 발송</h3><p>주문일 기준 1주일 이내에 보냅니다. 배가 못 뜨면 미리 연락드려요.</p></div></li>
+      </ol>
+      <div class="pay rv" id="pay">
+        <p class="pay__h">입금 계좌</p>
+        <p class="pay__no" id="acct">우리은행 1005-104-963646</p>
+        <p class="pay__who">예금주 박영수(바다보길)</p>
+        <div class="pay__row"><button class="btn btn--ghost" type="button" id="copyAcct">계좌번호 복사</button><span class="pay__ok" id="copyOk" role="status" aria-live="polite"></span></div>
+        <p class="pay__warn">금액 안내 문자를 받은 뒤에 입금해 주세요.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--white" aria-labelledby="h-proof">
+    <div class="wrap">
+      <h2 class="h2 rv" id="h-proof">믿으셔도 되는지, 직접 확인하실 수 있습니다</h2>
+      <ul class="proof">
+        <li class="rv"><h3>사업자 정보</h3><p>사업자등록번호 225-09-25660. 공정거래위원회에서 직접 조회하세요.</p><p><a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2250925660" target="_blank" rel="noopener">사업자정보 확인하기</a></p></li>
+        <li class="rv"><h3>통신판매업 신고</h3><p>완도군에 신고를 마쳤습니다.</p><span class="proof__no">2026-전남완도-063</span></li>
+        <li class="rv"><h3>환불·교환 기준</h3><p>상태가 이상하면 사진과 함께 알려 주세요. 기준은 미리 공개해 둡니다.</p><p><a href="/refund.html">환불·교환·배송 안내 보기</a></p></li>
+        <li class="rv"><h3>이력카드</h3><p>키운 어가, 건진 날, 크기를 적어 상자마다 넣습니다.</p></li>
+      </ul>
+      <p class="honest rv">아직 후기는 없습니다. 만들어 드릴 수 없는 것을 내세우는 대신, 지금 확인하실 수 있는 것부터 열어 둡니다.</p>
+      <div class="strip">
+        <div class="ph rv"><img src="/img/sea-band.jpg" width="1600" height="900" loading="lazy" alt="보길도 바다와 전복 양식장을 내려다본 풍경"></div>
+        <div class="ph rv"><img src="/img/product-live-9-10.jpg" width="1200" height="800" loading="lazy" alt="양식장에서 막 건져 올린 활전복"></div>
+        <div class="ph rv"><img src="/img/product-prepped.jpg" width="1200" height="900" loading="lazy" alt="껍질과 내장을 손질해 포장한 손질전복"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="h-offer">
+    <div class="wrap">
+      <h2 class="h2 rv" id="h-offer">보길도 어가에서 직접 기른 전복, 이렇게 보내 드립니다</h2>
+      <div class="offer">
+        <div class="offer__c rv"><h3>손질전복</h3><p>껍질과 내장까지 손질해 8개씩 보냅니다. 구이, 죽, 볶음 어떤 요리든 바로 조리하세요.</p><span class="k">바로 드실 때</span></div>
+        <div class="offer__c rv"><h3>활전복</h3><p>껍데기째 보냅니다. 숫자가 작을수록 큰 전복이에요.</p>
+          <table class="sizes"><caption class="sr">활전복 크기별 어울리는 요리</caption><thead><tr><th scope="col">크기</th><th scope="col">어울리는 요리</th></tr></thead><tbody>
+            <tr><td>4~6미</td><td>회, 접대용</td></tr><tr><td>7~8미</td><td>회, 스테이크, 선물용</td></tr><tr><td>9~10미</td><td>회, 버터구이, 찜</td></tr><tr><td>11~12미</td><td>전복장</td></tr><tr><td>13~14미</td><td>죽, 물회</td></tr></tbody></table>
+        </div>
+      </div>
+      <ul class="ship rv"><li><b>가격</b> 시세대로, 주문하시면 문자로 알려 드립니다.</li><li><b>배송비</b> 3,000원. 4kg 이상 주문하면 무료입니다. 도서산간은 추가 배송비가 있습니다.</li><li><b>발송</b> 주문일 기준 1주일 이내.</li></ul>
+      <div class="offer__cta"><a class="btn btn--solid btn--wide" href="https://forms.gle/7pdXrsu2LfyX6bJw6" target="_blank" rel="noopener">전복 구매</a></div>
+    </div>
+  </section>
+
+  <section class="sec sec--white" aria-labelledby="h-faq">
+    <div class="wrap">
+      <h2 class="h2 rv" id="h-faq">자주 묻는 질문</h2>
+      <div class="faq">
+        <details><summary>어디에서 키운 전복인가요?</summary><div class="faq__a">전남 완도군 보길도 바다의 어가에서 키운 전복입니다. 키운 어가와 건진 날은 상자 안 이력카드에 적어 보냅니다.</div></details>
+        <details><summary>가격은 얼마인가요?</summary><div class="faq__a">전복 값은 시세에 따라 달라서, 주문서를 받으면 금액을 문자로 안내해 드립니다. 금액을 확인하신 뒤 입금하시면 됩니다.</div></details>
+        <details><summary>어떻게 결제하나요?</summary><div class="faq__a">계좌이체로 받습니다. 금액 안내 문자에 결제 링크를 함께 보내 드리면 카드나 간편결제도 가능합니다.</div></details>
+        <details><summary>언제 받을 수 있나요?</summary><div class="faq__a">주문일 기준 1주일 이내에 발송합니다. 결항 등으로 배가 뜨지 못하면 늦어질 수 있고, 이 경우 미리 연락드립니다.</div></details>
+        <details><summary>크기를 못 고르겠어요.</summary><div class="faq__a">주문서의 크기에서 ‘잘 모르겠어요’를 고르고, 몇 분이 드실지와 해 드실 요리를 적어 주세요. 맞춰 담아 드립니다.</div></details>
+        <details><summary>선물로 보낼 수 있나요?</summary><div class="faq__a">주문서에 받는 분 이름과 주소를 따로 적으시면 그분께 바로 보냅니다.</div></details>
+        <details><summary>받았는데 상태가 이상해요.</summary><div class="faq__a">받으시면 바로 상태를 확인해 주시고, 문제가 있으면 사진과 함께 하단 사업자 정보의 연락처로 알려 주세요. 확인한 뒤 교환 또는 환불을 안내해 드립니다. 자세한 기준은 <a href="/refund.html">환불·교환·배송 안내</a>에 있습니다.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="close" data-hide-bar aria-labelledby="h-close">
+    <div class="wrap">
+      <h2 class="h2" id="h-close">어디서 자란 전복인지 알고 드세요.</h2>
+      <p>주문서 한 장이면 시작됩니다. 크기가 고민되면 몇 분이 드실지만 적어 주세요.</p>
+      <a class="btn btn--white" href="https://forms.gle/7pdXrsu2LfyX6bJw6" target="_blank" rel="noopener">전복 구매</a>
+      <p class="close__note">금액은 문자로 먼저 알려 드립니다. 입금 전에는 비용이 없어요.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot" data-hide-bar>
+  <div class="wrap">
+    <p class="foot__brand"><img src="/favicon.svg" width="30" height="30" alt=""><span>바다보길</span></p>
+    <p class="foot__links"><a href="/shop.html">상품 보기</a><a href="/guide-size.html">전복 크기 고르는 법</a><a href="/refund.html">환불·교환·배송 안내</a><a href="/terms.html">이용약관</a><a href="/privacy.html">개인정보 처리방침</a><a href="#how">이용안내</a></p>
+    <p class="foot__info">
+      <span>상호 : 바다보길</span><span>대표 : 박영수</span><span>사업자등록번호 : 225-09-25660 <a class="biz-chk" href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2250925660" target="_blank" rel="noopener">사업자정보확인</a></span><i class="brk" aria-hidden="true"></i><span>통신판매업 신고번호 : <b id="reg-no">2026-전남완도-063</b></span><span>주소 : 전남광주통합특별시 완도군 보길면 부황길 31</span><span>전화 : <a href="tel:01051000830">010-5100-0830</a></span><span>이메일 : <a href="mailto:bogilsea@bogilsea.com">bogilsea@bogilsea.com</a></span><span class="wide">호스팅서비스 제공 : GitHub Pages, Netlify</span>
+    </p>
+    <p class="foot__copy">© 2026 바다보길. All rights reserved.</p>
+  </div>
+</footer>
+
+<nav class="bar" id="bar" aria-label="주문 바로가기">
+  <a class="btn btn--solid" href="https://forms.gle/7pdXrsu2LfyX6bJw6" target="_blank" rel="noopener">전복 구매</a>
+</nav>
+
+<script>
+(function(){
+  var FORM='https://forms.gle/7pdXrsu2LfyX6bJw6';
+  function copyText(t){
+    if(navigator.clipboard&&window.isSecureContext)return navigator.clipboard.writeText(t);
+    return new Promise(function(res,rej){try{var e=document.createElement('textarea');e.value=t;e.setAttribute('readonly','');e.style.position='fixed';e.style.opacity='0';document.body.appendChild(e);e.select();var ok=document.execCommand('copy');document.body.removeChild(e);ok?res():rej()}catch(x){rej(x)}});
+  }
+  var ab=document.getElementById('copyAcct'),ok=document.getElementById('copyOk'),tm;
+  if(ab)ab.addEventListener('click',function(){
+    copyText('1005-104-963646').then(function(){ok.textContent='복사했어요. 은행 앱에 붙여 넣으세요.'},function(){ok.textContent='복사가 안 돼요. 번호를 길게 눌러 복사해 주세요.'});
+    clearTimeout(tm);tm=setTimeout(function(){ok.textContent=''},4000);
+  });
+  if(/KAKAOTALK|Instagram|FBAN|FBAV|NAVER\(inapp|DaumApps|Line\//i.test(navigator.userAgent||'')){var b=document.getElementById('inapp');if(b)b.hidden=false}
+  var cf=document.getElementById('copyForm');
+  if(cf)cf.addEventListener('click',function(){var st=document.getElementById('copyFormOk'),t0=cf.textContent;
+    copyText(FORM).then(function(){cf.textContent='복사했어요';if(st)st.textContent='주문서 주소를 복사했어요.';setTimeout(function(){cf.textContent=t0;if(st)st.textContent=''},2500)},function(){cf.textContent=FORM;if(st)st.textContent='복사가 안 돼요. 화면의 주소를 길게 눌러 복사해 주세요.'});
+  });
+  var bar=document.getElementById('bar'),hid=document.querySelectorAll('[data-hide-bar]');
+  if(bar&&'IntersectionObserver' in window){
+    var seen=new Set(),io=new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?seen.add(e.target):seen.delete(e.target)});bar.classList.toggle('is-on',seen.size===0)},{threshold:.12});
+    hid.forEach(function(el){io.observe(el)});
+  }else if(bar){bar.classList.add('is-on')}
+  var rv=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
+    var o=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');o.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    rv.forEach(function(el,i){el.style.transitionDelay=(i%4)*60+'ms';o.observe(el)});
+  }else{rv.forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
