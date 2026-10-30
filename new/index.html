@@ -133,6 +133,12 @@ ul,ol{padding:0;list-style:none}
 .pay__warn{margin-top:10px;font-size:.875rem;color:var(--mute)}
 
 /* evidence */
+.proofcard{margin-top:30px;display:grid;gap:24px;align-items:center;padding:24px 20px;border-radius:var(--r);background:var(--surf)}
+.idcard{background:#fff;border:1px solid var(--rule);border-radius:var(--r);padding:20px 22px 16px;max-width:380px;width:100%;margin-inline:auto;transform:rotate(-1.5deg)}
+.idcard .tag__h{font-size:1.0625rem}
+.idcard .tag__r{font-size:1rem;padding:12px 0}
+.proofcard__t h3{font:700 clamp(1.5rem,5.4vw,2rem)/1.35 var(--f-serif);letter-spacing:-.025em}
+.proofcard__t p{margin-top:8px;font-size:1.0625rem;color:var(--mute)}
 .proof{margin-top:30px;display:grid;gap:10px}
 .proof li{background:var(--surf);border-radius:var(--r);padding:20px}
 .proof h3{font:700 1.125rem/1.45 var(--f-serif);letter-spacing:-.015em}
@@ -223,6 +229,7 @@ body{padding-bottom:0}
   .split{grid-template-columns:1fr 1fr;gap:64px}
   .split--rev .ph{order:2}
   .ben{grid-template-columns:1fr 1fr;gap:14px}
+  .proofcard{grid-template-columns:1fr 1fr;gap:48px;padding:40px 48px}
   .proof{grid-template-columns:1fr 1fr;gap:14px}
   .strip{grid-template-columns:repeat(3,1fr)}
   .strip .ph:first-child{grid-column:auto;aspect-ratio:4/3}
@@ -330,12 +337,19 @@ body{padding-bottom:0}
   <section class="sec sec--white" aria-labelledby="h-proof">
     <div class="wrap">
       <h2 class="h2 rv" id="h-proof">믿으셔도 되는지, 직접 확인하실 수 있습니다</h2>
-      <ul class="proof">
-        <li class="rv"><h3>사업자 정보</h3><p>사업자등록번호 225-09-25660. 공정거래위원회에서 직접 조회하세요.</p><p><a href="https://www.ftc.go.kr/bizCommPop.do?wrkr_no=2250925660" target="_blank" rel="noopener">사업자정보 확인하기</a></p></li>
-        <li class="rv"><h3>통신판매업 신고</h3><p>완도군에 신고를 마쳤습니다.</p><span class="proof__no">2026-전남완도-063</span></li>
-        <li class="rv"><h3>환불·교환 기준</h3><p>상태가 이상하면 사진과 함께 알려 주세요. 기준은 미리 공개해 둡니다.</p><p><a href="/refund.html">환불·교환·배송 안내 보기</a></p></li>
-        <li class="rv"><h3>이력카드</h3><p>키운 어가, 건진 날, 크기를 적어 상자마다 넣습니다.</p></li>
-      </ul>
+      <div class="proofcard rv">
+        <div class="idcard" role="img" aria-label="이력카드 예시. 키운 어가, 건진 날, 크기를 적는 칸이 있습니다.">
+          <div class="tag__h">이력카드<span>바다보길</span></div>
+          <div class="tag__r"><b>키운 어가</b><i></i></div>
+          <div class="tag__r"><b>건진 날</b><i></i></div>
+          <div class="tag__r"><b>크기</b><i></i></div>
+          <p class="tag__cap">상자마다 이 카드가 들어갑니다.</p>
+        </div>
+        <div class="proofcard__t">
+          <h3>이력카드</h3>
+          <p>키운 어가, 건진 날, 크기를 적어 상자마다 넣습니다.</p>
+        </div>
+      </div>
       <p class="honest rv">아직 후기는 없습니다. 만들어 드릴 수 없는 것을 내세우는 대신, 지금 확인하실 수 있는 것부터 열어 둡니다.</p>
       <div class="strip">
         <div class="ph rv"><img src="/img/sea-band.jpg" width="1600" height="900" loading="lazy" alt="보길도 바다와 전복 양식장을 내려다본 풍경"></div>
