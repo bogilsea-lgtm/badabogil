@@ -59,7 +59,7 @@ ul,ol{padding:0;list-style:none}
 /* top */
 .top{position:absolute;inset:0 0 auto;z-index:5;padding-block:18px}
 .top .wrap{display:flex;align-items:center;justify-content:space-between}
-.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font:700 1.25rem/1 var(--f-serif)}
+.brand{display:inline-flex;align-items:center;gap:10px;min-height:44px;text-decoration:none;font:700 1.25rem/1 var(--f-serif)}
 .brand img{width:30px;height:30px}
 .top__link{font-weight:700;font-size:.9375rem;text-decoration:none;min-height:44px;display:inline-flex;align-items:center}
 
@@ -67,7 +67,8 @@ ul,ol{padding:0;list-style:none}
 .hero{position:relative;padding-top:92px;overflow:hidden}
 .hero__grid{display:grid;gap:36px}
 .hero__title{font:700 clamp(2.125rem,8.4vw,3.25rem)/1.25 var(--f-serif);letter-spacing:-.03em}
-.hero__title span{display:block;white-space:nowrap}.hero__title em{font-style:normal;color:var(--sea)}
+.hero__title span{display:block;white-space:nowrap}
+@media (max-width:380px){.hero__title{font-size:1.875rem}.hero__title span{white-space:normal}}.hero__title em{font-style:normal;color:var(--sea)}
 .hero__lead{margin-top:22px;max-width:30em;font-size:clamp(1.0625rem,3.6vw,1.25rem);line-height:1.7}
 .hero__cta{margin-top:30px;display:flex;flex-direction:column;gap:12px;max-width:420px}
 .hero__note{font-size:.9375rem;color:var(--mute);line-height:1.6}
