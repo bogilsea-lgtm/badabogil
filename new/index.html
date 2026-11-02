@@ -236,10 +236,12 @@ body{padding-bottom:0}
 
 /* motion */
 @media (prefers-reduced-motion:no-preference){
-  .hero__title,.hero__lead,.hero__cta{opacity:0;transform:translateY(12px);animation:up .8s cubic-bezier(.2,.7,.2,1) forwards}
+  .hero__lead,.hero__cta{opacity:0;transform:translateY(12px);animation:up .8s cubic-bezier(.2,.7,.2,1) forwards}
+  .hero__title{opacity:0;animation:tin .5s ease-out forwards}
   .hero__lead{animation-delay:.12s}.hero__cta{animation-delay:.24s}
   .tag{animation:drop 1s .5s cubic-bezier(.2,.8,.2,1.1) both}
   @keyframes up{to{opacity:1;transform:none}}
+  @keyframes tin{to{opacity:1}}
   @keyframes drop{from{opacity:0;transform:translateY(-26px) rotate(-6deg)}to{opacity:1;transform:rotate(-2.2deg)}}
   .rv{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
   .rv.in{opacity:1;transform:none}
