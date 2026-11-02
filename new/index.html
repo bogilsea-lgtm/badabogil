@@ -196,6 +196,29 @@ ul,ol{padding:0;list-style:none}
 .ship b{font-weight:700}
 .offer__cta{margin-top:30px;max-width:420px}
 
+/* pick: 크기 도우미 */
+.pick{margin-top:30px;background:var(--tide);border-radius:var(--r);padding:22px 20px}
+.pick h3{font:700 1.3125rem/1.4 var(--f-serif);letter-spacing:-.02em}
+.pick__sub{margin-top:4px;color:var(--mute);font-size:.9375rem}
+.pick fieldset{border:0;margin:18px 0 0;padding:0;min-width:0}
+.pick legend{padding:0;font-weight:700;margin-bottom:8px}
+.pick__row{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:48px;padding:0 18px;border-radius:999px;border:2px solid var(--rule);background:#fff;color:var(--deep);font:600 1rem/1.2 var(--f-body);cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background .15s,border-color .15s,color .15s,transform .12s}
+.chip:active{transform:scale(.97)}
+.chip[aria-pressed="true"]{background:var(--teal);border-color:var(--teal);color:#fff}
+.chip:focus-visible,.pick .btn:focus-visible{outline:3px solid var(--sea);outline-offset:2px}
+.pick__res{margin-top:20px;background:#fff;border-radius:14px;padding:18px}
+.pick__res[hidden]{display:none}
+.pick__size{font:800 2rem/1.2 var(--f-serif);letter-spacing:-.03em;color:var(--teal)}
+.pick__size small{font:600 1rem var(--f-body);color:var(--mute);letter-spacing:0;margin-left:6px}
+.pick__why{margin-top:6px}
+.pick__cnt{margin-top:4px;color:var(--mute);font-size:.9375rem}
+.pick__memo{margin-top:12px;padding:10px 12px;border-radius:10px;background:var(--surf);font-size:.9375rem;color:var(--deep)}
+.pick__res .btn{margin-top:14px;width:100%}
+.pick__note{margin-top:8px;color:var(--mute);font-size:.875rem;text-align:center}
+@media (min-width:900px){.pick{padding:28px}.pick__res .btn{width:auto}}
+@media (prefers-reduced-motion:no-preference){.pick__res.on{animation:pk .35s ease-out}@keyframes pk{from{opacity:0;transform:translateY(8px)}}}
+
 /* faq */
 .faq{margin-top:30px;max-width:46em}
 .faq details{border-top:1px solid var(--rule)}
@@ -473,6 +496,22 @@ body{padding-bottom:0}
   <section class="sec" aria-labelledby="h-offer">
     <div class="wrap">
       <h2 class="h2 rv" id="h-offer">보길도 어가에서 직접 기른 전복, 이렇게 보내 드립니다</h2>
+      <div class="pick rv" id="pick" hidden>
+        <h3>몇 분이, 무슨 요리 하세요?</h3>
+        <p class="pick__sub">두 가지만 고르면 활전복 크기를 알려 드립니다.</p>
+        <fieldset><legend>드시는 분</legend><div class="pick__row" data-g="n">
+          <button type="button" class="chip" aria-pressed="false" data-v="2">1~2명</button><button type="button" class="chip" aria-pressed="false" data-v="4">3~4명</button><button type="button" class="chip" aria-pressed="false" data-v="6">5~6명</button><button type="button" class="chip" aria-pressed="false" data-v="7">7명 이상</button></div></fieldset>
+        <fieldset><legend>해 드실 요리</legend><div class="pick__row" data-g="d">
+          <button type="button" class="chip" aria-pressed="false" data-v="hoe">회·접대</button><button type="button" class="chip" aria-pressed="false" data-v="gui">버터구이·찜</button><button type="button" class="chip" aria-pressed="false" data-v="jang">전복장</button><button type="button" class="chip" aria-pressed="false" data-v="juk">전복죽·물회</button><button type="button" class="chip" aria-pressed="false" data-v="idk">아직 모르겠어요</button></div></fieldset>
+        <div class="pick__res" id="pickRes" hidden aria-live="polite">
+          <div class="pick__size" id="pkSize"></div>
+          <p class="pick__why" id="pkWhy"></p>
+          <p class="pick__cnt" id="pkCnt"></p>
+          <p class="pick__memo" id="pkMemo"></p>
+          <a class="btn btn--solid" id="pkGo" href="https://forms.gle/7pdXrsu2LfyX6bJw6" target="_blank" rel="noopener">이 내용으로 주문하기</a>
+          <p class="pick__note">누르면 위 메모가 복사됩니다. 주문서에 붙여 넣거나 그대로 적어 주세요.</p>
+        </div>
+      </div>
       <div class="offer">
         <div class="offer__c rv"><h3>손질전복</h3><p>껍질과 내장까지 손질해 8개씩 보냅니다. 구이, 죽, 볶음 어떤 요리든 바로 조리하세요.</p><span class="k">바로 드실 때</span></div>
         <div class="offer__c rv"><h3>활전복</h3><p>껍데기째 보냅니다. 숫자가 작을수록 큰 전복이에요.</p>
@@ -599,9 +638,36 @@ var src=(P.get('src')||'').slice(0,24),sid=Math.random().toString(36).slice(2,10
 function track(e,loc){var d={e:e,v:v,src:src,loc:loc||'',sid:sid,p:location.pathname,t:new Date().toISOString()};
  try{var k='abq',a=JSON.parse(localStorage.getItem(k)||'[]');a.push(d);localStorage.setItem(k,JSON.stringify(a.slice(-50)))}catch(x){}
  if(AB.endpoint&&navigator.sendBeacon){try{navigator.sendBeacon(AB.endpoint,new Blob([JSON.stringify(d)],{type:'text/plain'}))}catch(x){}}}
-track('view');
+track('view');window.__pk=track;
 document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[href^="https://forms.gle"]');if(!a)return;
  var s=a.closest('header,section,.bar,footer');track('cta',s?(s.id||s.className.split(' ')[0]||s.tagName.toLowerCase()):'')},true);
+})();
+
+(function(){
+var el=document.getElementById('pick');if(!el)return;el.hidden=false;
+var st={n:null,d:null},res=document.getElementById('pickRes');
+var D={hoe:['4~6미 또는 7~8미','크기가 커서 썰었을 때 모양이 좋습니다.','회·접대'],gui:['9~10미','버터구이·찜에는 가장 많이 찾는 크기입니다.','버터구이·찜'],jang:['11~12미','전복장은 이 크기로 담급니다. 손질전복으로 담그면 수월합니다.','전복장'],juk:['13~14미','죽에는 큰 전복이 아깝습니다. 이 크기가 알맞습니다.','전복죽·물회']};
+function lab(v){return v==='7'?'7명 이상':(v==='2'?'1~2명':v==='4'?'3~4명':'5~6명')}
+function upd(){
+ if(!st.n||!st.d){res.hidden=true;return}
+ var n=+st.n,size,why,cnt='',dish;
+ if(st.d==='idk'){size='크기는 저희가 맞춰요';why='주문서에서 ‘잘 모르겠어요’를 고르고 인원만 적어 주세요. 맞춰 담아 드립니다.';dish='';}
+ else{var x=D[st.d];size=x[0];why=x[1];dish=x[2];
+  if(n<7){if(st.d==='gui')cnt='한 사람 2~3마리 기준, 넉넉히 '+n*2+'~'+n*3+'마리쯤 됩니다.';
+   if(st.d==='juk')cnt='죽 2인분에 3~4마리 기준, 약 '+Math.ceil(n/2)*3+'~'+Math.ceil(n/2)*4+'마리쯤 됩니다.'}}
+ var memo='드시는 분 '+lab(st.n)+' · '+(st.d==='idk'?'요리 아직 미정 · 크기 잘 모르겠어요':'요리 '+dish+' · 크기 '+size);
+ document.getElementById('pkSize').textContent=size;
+ document.getElementById('pkWhy').textContent=why;
+ document.getElementById('pkCnt').textContent=cnt;document.getElementById('pkCnt').hidden=!cnt;
+ var m=document.getElementById('pkMemo');m.textContent='주문 메모: '+memo;m.dataset.t=memo;
+ var was=res.hidden;res.hidden=false;if(was){res.classList.remove('on');void res.offsetWidth;res.classList.add('on')}
+}
+el.addEventListener('click',function(ev){var b=ev.target.closest('.chip');if(!b)return;
+ var g=b.parentNode.dataset.g;st[g]=b.dataset.v;
+ [].forEach.call(b.parentNode.children,function(c){c.setAttribute('aria-pressed',c===b?'true':'false')});
+ upd();if(st.n&&st.d)window.__pk&&window.__pk('pick',g+':'+b.dataset.v)});
+document.getElementById('pkGo').addEventListener('click',function(){var t=document.getElementById('pkMemo').dataset.t||'';
+ try{navigator.clipboard&&navigator.clipboard.writeText(t)}catch(e){}});
 })();
 </script>
 </body>
