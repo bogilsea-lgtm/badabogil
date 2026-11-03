@@ -257,6 +257,7 @@ ul,ol{padding:0;list-style:none}
 .bar .btn{width:100%}
 body{padding-bottom:0}
 
+html[data-ab="wait"] .hero__title,html[data-ab="wait"] .hero__lead{visibility:hidden}
 /* motion */
 @media (prefers-reduced-motion:no-preference){
   .hero__lead,.hero__cta{opacity:0;transform:translateY(12px);animation:up .8s cubic-bezier(.2,.7,.2,1) forwards}
@@ -631,18 +632,21 @@ addEventListener('scroll',req,{passive:true});addEventListener('resize',req);upd
 var AB={on:true,endpoint:'',
  /* form: 구글폼 '미리 채워진 링크'의 주소(url, ?usp=pp_url 앞까지)와 접수 코드 질문의 entry 번호(entry). 둘 다 채우면 주문서 링크에 접수 코드(예 A-k3f9x2)가 자동으로 들어갑니다. */
  form:{url:'https://docs.google.com/forms/d/e/1FAIpQLScvtWg3hSCw0N1LGQkWj8c77Kzbh4OOO74PVKVQ3ZuOdBomSQ/viewform',entry:'1678689332'},
- hackle:{key:'yez7XMBFjpiWNMA2lpaHvOoiqoI8SeJz'},
+ hackle:{key:'yez7XMBFjpiWNMA2lpaHvOoiqoI8SeJz',exp:0},
  variants:{
   B:'<b>산지에서 바로 손질해 보냅니다.<br>주문일 기준 1주일 이내 발송.</b>',
   BT:'<span>산지직송 전복,</span> <span><em>바다보길</em></span>'
  }};
 var P=new URLSearchParams(location.search),q=(P.get('v')||'').toUpperCase(),v='A';
 if(q==='A'||q==='B'){v=q}
-else if(AB.on){try{v=localStorage.getItem('abv');if(v!=='A'&&v!=='B'){v=Math.random()<.5?'A':'B';localStorage.setItem('abv',v)}}catch(e){v='A'}}
-document.documentElement.setAttribute('data-v',v);
-if(v==='B'){var l=document.querySelector('.hero__lead');if(l)l.innerHTML=AB.variants.B;var h=document.querySelector('.hero__title');if(h)h.innerHTML=AB.variants.BT}
+else if(AB.on&&!AB.hackle.exp){try{v=localStorage.getItem('abv');if(v!=='A'&&v!=='B'){v=Math.random()<.5?'A':'B';localStorage.setItem('abv',v)}}catch(e){v='A'}}
+var hw=!!(AB.hackle.exp&&AB.hackle.key&&q!=='A'&&q!=='B'),dz=document.documentElement;
+if(hw)dz.setAttribute('data-ab','wait');
+dz.setAttribute('data-v',v);
+function applyB(){var l=document.querySelector('.hero__lead');if(l)l.innerHTML=AB.variants.B;var h=document.querySelector('.hero__title');if(h)h.innerHTML=AB.variants.BT}
+if(v==='B')applyB();
 var src=(P.get('src')||'').slice(0,24),sid=Math.random().toString(36).slice(2,10);
-function track(e,loc){var d={e:e,v:v,src:src,loc:loc||'',sid:sid,p:location.pathname,t:new Date().toISOString()};
+function track(e,loc,x){var d={e:e,v:v,src:src,loc:loc||'',sid:sid,p:location.pathname,t:new Date().toISOString()};if(x)d.x=x;
  try{var k='abq',a=JSON.parse(localStorage.getItem(k)||'[]');a.push(d);localStorage.setItem(k,JSON.stringify(a.slice(-50)))}catch(x){}
  if(AB.endpoint&&navigator.sendBeacon){try{navigator.sendBeacon(AB.endpoint,new Blob([JSON.stringify(d)],{type:'text/plain'}))}catch(x){}}
  hk(d)}
@@ -650,17 +654,24 @@ function track(e,loc){var d={e:e,v:v,src:src,loc:loc||'',sid:sid,p:location.path
    키 위치: 핵클 대시보드 > SDK 연동 정보. 초기화가 끝나기 전의 이벤트는 모아 두었다가 초기화 후 보냅니다. */
 var hq=[],hc=null;
 function hk(d){if(!AB.hackle.key)return;
- var ev={key:'bg_'+d.e,properties:{variant:d.v,src:d.src,loc:d.loc,sid:d.sid,page:d.p}};
+ var ev={key:'bg_'+d.e,properties:{variant:d.v,src:d.src,loc:d.loc,sid:d.sid,page:d.p,reason:d.x||''}};
  if(hc){try{hc.track(ev)}catch(x){}}else hq.push(ev)}
 function hkInit(){if(!AB.hackle.key||window.Hackle)return;
  var s=document.createElement('script');s.async=true;
  s.src='https://cdn2.hackle.io/npm/@hackler/javascript-sdk@12.2.1/lib/index.browser.umd.min.js';
  s.onload=function(){try{var c=window.Hackle.createInstance(AB.hackle.key);
-  c.onInitialized().then(function(){hc=c;hq.splice(0).forEach(function(e){try{c.track(e)}catch(x){}})},function(){})}catch(x){}};
+  c.onInitialized().then(function(){hc=c;hq.splice(0).forEach(function(e){try{c.track(e)}catch(x){}});
+  if(hw){try{var dd=c.variationDetail(AB.hackle.exp);resolve(dd.variation,dd.reason)}catch(x){resolve('A','ERROR')}}},function(){resolve('A','INIT_FAIL')})}catch(x){resolve('A','ERROR')}};
+ s.onerror=function(){resolve('A','SDK_LOAD_FAIL')};
  document.head.appendChild(s)}
-hkInit();track('view');window.__pk=track;
-[].forEach.call(document.querySelectorAll('a[href^="https://forms.gle"]'),function(a){a.setAttribute('data-form','1');
- if(AB.form.url&&AB.form.entry)a.href=AB.form.url+(AB.form.url.indexOf('?')<0?'?':'&')+'usp=pp_url&entry.'+encodeURIComponent(AB.form.entry)+'='+encodeURIComponent(v+'-'+sid)});
+var rs=false;
+function links(){[].forEach.call(document.querySelectorAll('a[href^="https://forms.gle"],a[data-form]'),function(a){a.setAttribute('data-form','1');
+ if(AB.form.url&&AB.form.entry)a.href=AB.form.url+(AB.form.url.indexOf('?')<0?'?':'&')+'usp=pp_url&entry.'+encodeURIComponent(AB.form.entry)+'='+encodeURIComponent(v+'-'+sid)})}
+function resolve(vv,rsn){if(rs)return;rs=true;if(vv==='B'){v='B';applyB()}
+ dz.setAttribute('data-v',v);dz.removeAttribute('data-ab');links();track('view','',rsn||'')}
+/* 핵클 A/B 테스트 모드(AB.hackle.exp=실험 키 숫자): 그룹은 핵클이 정합니다. 응답이 늦으면 1.2초 뒤 A로 진행합니다. */
+hkInit();window.__pk=track;links();
+if(hw){setTimeout(function(){resolve('A','TIMEOUT')},1200)}else{rs=true;track('view')}
 document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[data-form]');if(!a)return;
  var s=a.closest('header,section,.bar,footer');track('cta',s?(s.id||s.className.split(' ')[0]||s.tagName.toLowerCase()):'')},true);
 })();
