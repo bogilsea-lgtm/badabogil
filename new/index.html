@@ -301,7 +301,7 @@ body{padding-bottom:0}
 .scene svg{width:100%;height:100%;overflow:visible}
 .top,.hero__grid{position:relative;z-index:2}
 .top{position:absolute}
-.hero__facts li{background:rgba(255,255,255,.78)}
+.hero__facts li{background:rgba(255,255,255,.94)}
 .hero__grid{padding-bottom:0}
 .hero__vis{order:0;margin:6px 0 0;height:300px}
 .hero__ph{position:absolute;right:0;bottom:30px;width:64%;aspect-ratio:4/3.1;border:4px solid #fff;border-radius:var(--r);box-shadow:0 14px 28px -16px rgba(14,59,66,.45)}
@@ -323,7 +323,11 @@ body{padding-bottom:0}
   .bird{translate:0 -215px}
   .scene{height:620px;bottom:-90px}
   .hero__grid{min-height:640px;align-items:end;padding-bottom:0}
-  .hero__grid>div:first-child{align-self:center;padding-bottom:90px}
+  .hero__grid>div:first-child{align-self:center;padding-bottom:90px;position:relative;isolation:isolate}
+  .hero__grid>div:first-child::before{content:"";position:absolute;z-index:-1;inset:-70px -160px -40px -140px;background:radial-gradient(ellipse closest-side at 50% 50%,rgba(238,247,247,.96) 0%,rgba(238,247,247,.9) 60%,rgba(238,247,247,0) 100%)}
+  .hero__lead{max-width:24em;margin-top:16px}
+  .hero__lead b{font-size:1.5rem;margin-bottom:10px}
+  .hero__cta{margin-top:30px}
   .hero__vis{height:auto;margin:0 0 70px;align-self:end}
   .hero__ph{position:relative;right:auto;bottom:auto;width:100%;max-width:500px;margin-left:auto;aspect-ratio:4/3.2}
   .tag{left:auto;bottom:-30px;width:270px;margin-left:0;left:10%}
@@ -363,7 +367,6 @@ body{padding-bottom:0}
     <div>
       <h1 class="hero__title"><span>깡깡한 전복,</span> <span><em>바다보길</em></span></h1>
       <p class="hero__lead"><b>어느 바다에서, 언제 건졌는지.<br>상자 안에 적어 보냅니다.</b><br>보길도 어가에서 직접 기른 전복.</p>
-      <p class="hero__gloss">깡깡하다는 사투리로 단단하다는 말이에요.</p>
       <div class="hero__cta">
         <a class="btn btn--solid" href="https://forms.gle/7pdXrsu2LfyX6bJw6" target="_blank" rel="noopener">전복 구매</a>
         <ul class="hero__facts"><li>활전복 · 손질전복</li><li>금액은 문자로 먼저</li><li>주문일 기준 1주일 이내 발송</li></ul>
