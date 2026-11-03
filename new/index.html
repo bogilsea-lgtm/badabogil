@@ -628,6 +628,7 @@ addEventListener('scroll',req,{passive:true});addEventListener('resize',req);upd
 var AB={on:false,endpoint:'',
  /* form: 구글폼 '미리 채워진 링크'의 주소(url, ?usp=pp_url 앞까지)와 접수 코드 질문의 entry 번호(entry). 둘 다 채우면 주문서 링크에 접수 코드(예 A-k3f9x2)가 자동으로 들어갑니다. */
  form:{url:'',entry:''},
+ hackle:{key:''},
  variants:{
   B:'<b>씹을수록 오독오독한 보길도 전복.<br>어느 바다에서 건졌는지도 상자 안에 적어 보냅니다.</b><br>보길도 어가에서 직접 기른 전복.'
  }};
@@ -639,8 +640,21 @@ if(v==='B'){var l=document.querySelector('.hero__lead');if(l)l.innerHTML=AB.vari
 var src=(P.get('src')||'').slice(0,24),sid=Math.random().toString(36).slice(2,10);
 function track(e,loc){var d={e:e,v:v,src:src,loc:loc||'',sid:sid,p:location.pathname,t:new Date().toISOString()};
  try{var k='abq',a=JSON.parse(localStorage.getItem(k)||'[]');a.push(d);localStorage.setItem(k,JSON.stringify(a.slice(-50)))}catch(x){}
- if(AB.endpoint&&navigator.sendBeacon){try{navigator.sendBeacon(AB.endpoint,new Blob([JSON.stringify(d)],{type:'text/plain'}))}catch(x){}}}
-track('view');window.__pk=track;
+ if(AB.endpoint&&navigator.sendBeacon){try{navigator.sendBeacon(AB.endpoint,new Blob([JSON.stringify(d)],{type:'text/plain'}))}catch(x){}}
+ hk(d)}
+/* 핵클(Hackle) 연동: AB.hackle.key 에 '브라우저 SDK 키'를 넣으면 켜집니다(비어 있으면 아무것도 불러오지 않음).
+   키 위치: 핵클 대시보드 > SDK 연동 정보. 초기화가 끝나기 전의 이벤트는 모아 두었다가 초기화 후 보냅니다. */
+var hq=[],hc=null;
+function hk(d){if(!AB.hackle.key)return;
+ var ev={key:'bg_'+d.e,properties:{variant:d.v,src:d.src,loc:d.loc,sid:d.sid,page:d.p}};
+ if(hc){try{hc.track(ev)}catch(x){}}else hq.push(ev)}
+function hkInit(){if(!AB.hackle.key||window.Hackle)return;
+ var s=document.createElement('script');s.async=true;
+ s.src='https://cdn2.hackle.io/npm/@hackler/javascript-sdk@12.2.1/lib/index.browser.umd.min.js';
+ s.onload=function(){try{var c=window.Hackle.createInstance(AB.hackle.key);
+  c.onInitialized().then(function(){hc=c;hq.splice(0).forEach(function(e){try{c.track(e)}catch(x){}})},function(){})}catch(x){}};
+ document.head.appendChild(s)}
+hkInit();track('view');window.__pk=track;
 [].forEach.call(document.querySelectorAll('a[href^="https://forms.gle"]'),function(a){a.setAttribute('data-form','1');
  if(AB.form.url&&AB.form.entry)a.href=AB.form.url+(AB.form.url.indexOf('?')<0?'?':'&')+'usp=pp_url&entry.'+encodeURIComponent(AB.form.entry)+'='+encodeURIComponent(v+'-'+sid)});
 document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[data-form]');if(!a)return;
