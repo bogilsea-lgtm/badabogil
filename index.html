@@ -369,7 +369,7 @@ html[data-ab="wait"] .hero__title,html[data-ab="wait"] .hero__lead{visibility:hi
       <h1 class="hero__title"><span>깡깡한 전복,</span> <span><em>바다보길</em></span></h1>
       <p class="hero__lead"><b>씹을수록 오독오독 단단한 식감.<br>보길도로 돌아와 섬의 전복을 보냅니다.</b></p>
       <div class="hero__cta">
-        <a class="btn btn--solid" href="/shop.html" data-cta="1">전복 구매</a>
+        <a class="btn btn--solid" href="https://forms.gle/7pdXrsu2LfyX6bJw6" target="_blank" rel="noopener">전복 구매</a>
         <ul class="hero__facts"><li>활전복 · 손질전복</li><li>금액은 문자로 먼저</li><li>주문일 기준 1주일 이내 발송</li></ul>
         <div class="inapp" id="inapp" hidden>인스타그램이나 카카오톡 안에서 주문서가 열리지 않으면, 주소를 복사해 크롬이나 사파리에서 열어 주세요.<button type="button" id="copyForm">주문서 주소 복사</button><span class="sr" id="copyFormOk" role="status" aria-live="polite"></span></div>
       </div>
@@ -524,7 +524,7 @@ html[data-ab="wait"] .hero__title,html[data-ab="wait"] .hero__lead{visibility:hi
         </div>
       </div>
       <ul class="ship rv"><li><b>가격</b> 시세대로, 주문하시면 문자로 알려 드립니다.</li><li><b>배송비</b> 3,000원. 4kg 이상 주문하면 무료입니다. 도서산간은 추가 배송비가 있습니다.</li><li><b>발송</b> 주문일 기준 1주일 이내.</li><li><b>취소·교환</b> 발송 전에는 전액 취소됩니다. 상태에 문제가 있으면 받은 날을 포함해 7일 이내에 사진과 함께 알려 주세요. 교환이나 환불로 처리하고, 그때의 배송비는 바다보길이 부담합니다.</li></ul>
-      <div class="offer__cta"><a class="btn btn--solid btn--wide" href="/shop.html" data-cta="1">전복 구매</a></div>
+      <div class="offer__cta"><a class="btn btn--solid btn--wide" href="https://forms.gle/7pdXrsu2LfyX6bJw6" target="_blank" rel="noopener">전복 구매</a></div>
     </div>
   </section>
 
@@ -547,7 +547,7 @@ html[data-ab="wait"] .hero__title,html[data-ab="wait"] .hero__lead{visibility:hi
     <div class="wrap">
       <h2 class="h2" id="h-close">어디서 자란 전복인지 알고 드세요.</h2>
       <p>주문서 한 장이면 시작됩니다. 크기가 고민되면 몇 분이 드실지만 적어 주세요.</p>
-      <a class="btn btn--white" href="/shop.html" data-cta="1">전복 구매</a>
+      <a class="btn btn--white" href="https://forms.gle/7pdXrsu2LfyX6bJw6" target="_blank" rel="noopener">전복 구매</a>
       <p class="close__note">금액은 문자로 먼저 알려 드립니다. 입금 전에는 비용이 없어요.</p>
     </div>
   </section>
@@ -565,7 +565,7 @@ html[data-ab="wait"] .hero__title,html[data-ab="wait"] .hero__lead{visibility:hi
 </footer>
 
 <nav class="bar" id="bar" aria-label="주문 바로가기">
-  <a class="btn btn--solid" href="/shop.html" data-cta="1">전복 구매</a>
+  <a class="btn btn--solid" href="https://forms.gle/7pdXrsu2LfyX6bJw6" target="_blank" rel="noopener">전복 구매</a>
 </nav>
 
 <script>
@@ -672,7 +672,7 @@ function resolve(vv,rsn){if(rs)return;rs=true;if(vv==='B'){v='B';applyB()}
 /* 핵클 A/B 테스트 모드(AB.hackle.exp=실험 키 숫자): 그룹은 핵클이 정합니다. 응답이 늦으면 1.2초 뒤 A로 진행합니다. */
 hkInit();window.__pk=track;links();
 if(hw){setTimeout(function(){resolve('A','TIMEOUT')},1200)}else{rs=true;track('view')}
-document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[data-form],a[data-cta]');if(!a)return;
+document.addEventListener('click',function(ev){var a=ev.target.closest&&ev.target.closest('a[data-form]');if(!a)return;
  var s=a.closest('header,section,.bar,footer');track('cta',s?(s.id||s.className.split(' ')[0]||s.tagName.toLowerCase()):'')},true);
 })();
 
